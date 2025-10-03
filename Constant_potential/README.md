@@ -4,11 +4,11 @@ The whole workflow is split in four python notebooks, each one associated with a
 The generation of a PZC model is a preliminary step.
 
 Sequence of STEPS:
-STEP 0: Development of a PZC model (alternatively a pre-trained general-purpose model can be employed) => see notebook *Workflow_PZC.ipynb*
-STEP 1: Training via Transfer Learning
-STEP 2: Explorative MD simulation with LAMMPS
-STEP 3: "DEAL" selection of new configurations
-STEP 4: Single-point calculations for the labelling of the configurations at constant potential
+- STEP 0: Development of a PZC model (alternatively a pre-trained general-purpose model can be employed) => see notebook *Workflow_PZC.ipynb*
+- STEP 1: Training via Transfer Learning
+- STEP 2: Explorative MD simulation with LAMMPS
+- STEP 3: "DEAL" selection of new configurations
+- STEP 4: Single-point calculations for the labelling of the configurations at constant potential
 
 Each folder collects the input/output files of a specific step.
 
