@@ -9,6 +9,8 @@ Sequence of STEPS:
 - STEP 4: DFT-Single-point calculations for the labelling of the configurations
 
 Each folder collects the input/output files of a specific step.
+
+<img src="PZC_workflow.png" alt="PZC" width="70%">
   
 These steps should be repeated until the generated ML potential is sufficiently reliable, i.e.:
 - it allows for stable MD simulations
