@@ -40,9 +40,11 @@ The following software and versions have been used:
 - LAMMPS with support of [MACE](https://github.com/ACEsuit/lammps)
 - DEAL (from [luigibonati/DEAL/new_DEAL](https://github.com/luigibonati/DEAL/tree/new_deal?tab=readme-ov-file))
 - FLARE (v1.3.3-fix from [luigibonati/flare](https://github.com/luigibonati/flare/tree/1.3) → modified FLARE version with small fixes)
-- VASP [package](https://www.vasp.at/)
+- a DFT engine (e.g., VASP [package](https://www.vasp.at/))
 - DoubleReferenceMethod suite (from [michelegiovannibianchi/FCP-calculator-DoubleReferenceMethod](https://github.com/michelegiovannibianchi/FCP-calculator-DoubleReferenceMethod))
 
+> [!NOTE]  
+> The possibility to afford a rigorous "constant potential" approach, like the *Double Reference Method*, is one of the peculiarities of the proposed strategy. However, other "constant potential" schemes can be readily applied to the workflow.
 
 Optional:
 - Fessa colormap (from [luigibonati/fessa-color-palette](https://github.com/luigibonati/fessa-color-palette) or from [michelegiovannibianchi/fessa-color-palette](https://github.com/michelegiovannibianchi/fessa-color-palette) for compatibility with Matplotlib>=v3.7.0) 
