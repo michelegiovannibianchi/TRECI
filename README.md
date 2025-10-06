@@ -39,7 +39,7 @@ The following software and versions have been used:
 - Franken (>=v0.4.0 from [CSML-IIT-UCL/franken](https://github.com/CSML-IIT-UCL/franken/))
 - LAMMPS with support of [MACE](https://github.com/ACEsuit/lammps)
 - DEAL (from [luigibonati/DEAL/new_DEAL](https://github.com/luigibonati/DEAL/tree/new_deal?tab=readme-ov-file))
-- FLARE (v1.3.3-fix from [luigibonati/flare](https://github.com/luigibonati/flare/tree/1.3) → modified FLARE version with small fixes)
+- FLARE (v1.3.3-fix from [luigibonati/flare](https://github.com/luigibonati/flare) → modified FLARE version with small fixes)
 - a DFT engine (e.g., VASP [package](https://www.vasp.at/))
 - DoubleReferenceMethod suite (from [michelegiovannibianchi/FCP-calculator-DoubleReferenceMethod](https://github.com/michelegiovannibianchi/FCP-calculator-DoubleReferenceMethod))
 
