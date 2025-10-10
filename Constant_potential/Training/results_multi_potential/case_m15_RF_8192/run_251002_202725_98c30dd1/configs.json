@@ -1,0 +1,58 @@
+{
+    "dataset": {
+        "name": "Cu_H2O_m15",
+        "train_path": "Dataset/Train_m15_union_with_head.xyz",
+        "test_path": null,
+        "val_path": "Dataset/Valid_m15_union_with_head.xyz",
+        "max_train_samples": null
+    },
+    "solver": {
+        "l2_penalty": {
+            "value": null,
+            "values": null,
+            "start": -10,
+            "stop": -7,
+            "num": 2,
+            "scale": "log"
+        },
+        "force_weight": {
+            "value": null,
+            "values": null,
+            "start": 0.5,
+            "stop": 0.9,
+            "num": 2,
+            "scale": "linear"
+        }
+    },
+    "backbone": {
+        "path_or_id": "MACE-L0",
+        "interaction_block": 2,
+        "family": "mace"
+    },
+    "rfs": {
+        "rf_type": "gaussian",
+        "num_random_features": 8192,
+        "length_scale": {
+            "value": null,
+            "values": null,
+            "start": 4.0,
+            "stop": 10.0,
+            "num": 4,
+            "scale": "linear"
+        },
+        "use_offset": true,
+        "rng_seed": 42
+    },
+    "rf_normalization": "leading_eig",
+    "save_every_model": false,
+    "dtype": "float64",
+    "save_fmaps": false,
+    "scale_by_species": true,
+    "jac_chunk_size": 8,
+    "run_dir": "./results_multi_potential/case_m15_RF_8192",
+    "seed": 42,
+    "console_logging_level": "INFO",
+    "num_gpus": 4,
+    "gpu_model": "NVIDIA A100-SXM-64GB",
+    "cpu_model": " Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz"
+}

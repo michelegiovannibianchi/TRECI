@@ -1,0 +1,28 @@
+input_data:
+  filenames:
+  - All_Data.xyz
+flare_calc:
+  gp: SGP_Wrapper
+  kernels:
+  - name: NormalizedDotProduct
+    sigma: 2
+    power: 2
+  descriptors:
+  - name: B2
+    nmax: 8
+    lmax: 3
+    cutoff_function: cosine
+    radial_basis: chebyshev
+  cutoff: 5.5
+  species:
+  - 1
+  - 8
+  - 29
+otf:
+  std_tolerance_factor: -0.08
+  update_style: threshold
+  update_threshold: 0.064
+  max_atoms_added: -1
+  force_only: true
+  write_model: 1
+  wall_time: 86000

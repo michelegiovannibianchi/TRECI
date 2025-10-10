@@ -1,0 +1,2 @@
+loop	NELECT	Fermi(eV)	Fermishift(eV)	mu(eV)	U(V)	conv(V)	Ewithoutentropy(eV)	Ewithoutentropy_grand(eV)	Etoten(eV)	Etoten_grand(eV)	Cpersurf(e/V/A^2)
+2	1457.321443	   2.204982	  -5.644821	 -3.440	  -1.000161	   0.000161	-1807.273669	-1810.187215	-1807.361834	-1810.275380	   0.008366

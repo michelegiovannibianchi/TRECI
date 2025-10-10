@@ -1,0 +1,112 @@
+2025-10-02 23:08:23.863 DEBUG (rank 0): console_logging_level: INFO
+dtype: float64
+jac_chunk_size: 8
+rf_normalization: leading_eig
+run_dir: ./results_multi_potential/case_m2_RF_8192
+save_every_model: False
+save_fmaps: False
+scale_by_species: True
+seed: 42
+backbone:
+    family: mace
+    interaction_block: 2
+    path_or_id: MACE-L0
+dataset:
+    max_train_samples: null
+    name: Cu_H2O_m2
+    test_path: null
+    train_path: Dataset/Train_m2_union_with_head.xyz
+    val_path: Dataset/Valid_m2_union_with_head.xyz
+rfs:
+    length_scale:
+      num: 4
+      scale: linear
+      start: 4.0
+      stop: 10.0
+      value: null
+      values: null
+    num_random_features: 8192
+    rf_type: gaussian
+    rng_seed: 42
+    use_offset: true
+solver:
+    force_weight:
+      num: 2
+      scale: linear
+      start: 0.5
+      stop: 0.9
+      value: null
+      values: null
+    l2_penalty:
+      num: 2
+      scale: log
+      start: -10
+      stop: -7
+      value: null
+      values: null
+
+2025-10-02 23:08:23.864 INFO (rank 0): Initializing default cache directory at /leonardo/home/userexternal/mbianchi/.franken
+2025-10-02 23:08:23.879 INFO (rank 2): Initializing default cache directory at /leonardo/home/userexternal/mbianchi/.franken
+2025-10-02 23:08:23.879 INFO (rank 1): Initializing default cache directory at /leonardo/home/userexternal/mbianchi/.franken
+2025-10-02 23:08:23.880 INFO (rank 3): Initializing default cache directory at /leonardo/home/userexternal/mbianchi/.franken
+2025-10-02 23:08:23.880 INFO (rank 0): Run folder: results_multi_potential/case_m2_RF_8192/run_251002_230823_c7dd49d4
+2025-10-02 23:08:23.881 INFO (rank 3): Dataset with name 'Cu_H2O_m2' not found in registry
+2025-10-02 23:08:23.881 INFO (rank 2): Dataset with name 'Cu_H2O_m2' not found in registry
+2025-10-02 23:08:23.881 INFO (rank 1): Dataset with name 'Cu_H2O_m2' not found in registry
+2025-10-02 23:08:23.881 INFO (rank 0): Dataset with name 'Cu_H2O_m2' not found in registry
+2025-10-02 23:08:29.071 DEBUG (rank 3): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=4.0, use_offset=True, rng_seed=42)
+2025-10-02 23:08:29.074 DEBUG (rank 2): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=4.0, use_offset=True, rng_seed=42)
+2025-10-02 23:08:29.076 DEBUG (rank 1): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=4.0, use_offset=True, rng_seed=42)
+2025-10-02 23:08:29.081 DEBUG (rank 0): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=4.0, use_offset=True, rng_seed=42)
+2025-10-02 23:14:06.083 WARNING (rank 1): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:14:14.590 WARNING (rank 2): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:14:41.556 WARNING (rank 0): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:14:54.399 WARNING (rank 3): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:14:55.488 DEBUG (rank 3): Retrieved 4 logs.
+2025-10-02 23:14:55.488 DEBUG (rank 1): Retrieved 4 logs.
+2025-10-02 23:14:55.488 DEBUG (rank 2): Retrieved 4 logs.
+2025-10-02 23:14:55.489 DEBUG (rank 0): Retrieved 4 logs.
+2025-10-02 23:14:58.127 DEBUG (rank 0): Identified new best model: <LogEntry hash=16b513f3da426f53b445f8f63cb4f993, id=0>
+2025-10-02 23:14:58.142 DEBUG (rank 0): Saved best model (within-experiment ID=0) to results_multi_potential/case_m2_RF_8192/run_251002_230823_c7dd49d4/best_ckpt.pt
+2025-10-02 23:14:58.142 INFO (rank 0): Trial   1 | rf_type: gaussian | num_random_features:  8192   | length_scale:  4.000  | use_offset:  True   | rng_seed:   42    | Best trial 1 (energy 32.02 meV/atom - forces 42.5 meV/Ang)
+2025-10-02 23:14:58.340 DEBUG (rank 3): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=6.0, use_offset=True, rng_seed=42)
+2025-10-02 23:14:58.343 DEBUG (rank 2): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=6.0, use_offset=True, rng_seed=42)
+2025-10-02 23:14:58.343 DEBUG (rank 1): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=6.0, use_offset=True, rng_seed=42)
+2025-10-02 23:14:58.343 DEBUG (rank 0): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=6.0, use_offset=True, rng_seed=42)
+2025-10-02 23:20:29.802 WARNING (rank 1): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:20:38.005 WARNING (rank 2): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:21:07.158 WARNING (rank 0): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:21:15.910 WARNING (rank 3): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:21:16.595 DEBUG (rank 3): Retrieved 4 logs.
+2025-10-02 23:21:16.595 DEBUG (rank 1): Retrieved 4 logs.
+2025-10-02 23:21:16.595 DEBUG (rank 2): Retrieved 4 logs.
+2025-10-02 23:21:16.595 DEBUG (rank 0): Retrieved 4 logs.
+2025-10-02 23:21:19.176 DEBUG (rank 0): Identified new best model: <LogEntry hash=e8fde58b2ed54c416c79092e65fc6d02, id=0>
+2025-10-02 23:21:19.188 DEBUG (rank 0): Saved best model (within-experiment ID=0) to results_multi_potential/case_m2_RF_8192/run_251002_230823_c7dd49d4/best_ckpt.pt
+2025-10-02 23:21:19.189 INFO (rank 0): Trial   2 | rf_type: gaussian | num_random_features:  8192   | length_scale:  6.000  | use_offset:  True   | rng_seed:   42    | Best trial 2 (energy 42.04 meV/atom - forces 31.9 meV/Ang)
+2025-10-02 23:21:19.389 DEBUG (rank 3): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=8.0, use_offset=True, rng_seed=42)
+2025-10-02 23:21:19.391 DEBUG (rank 2): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=8.0, use_offset=True, rng_seed=42)
+2025-10-02 23:21:19.392 DEBUG (rank 0): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=8.0, use_offset=True, rng_seed=42)
+2025-10-02 23:21:19.392 DEBUG (rank 1): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=8.0, use_offset=True, rng_seed=42)
+2025-10-02 23:26:50.954 WARNING (rank 1): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:26:58.619 WARNING (rank 2): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:27:28.039 WARNING (rank 0): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:27:37.009 WARNING (rank 3): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:27:37.697 DEBUG (rank 3): Retrieved 4 logs.
+2025-10-02 23:27:37.697 DEBUG (rank 2): Retrieved 4 logs.
+2025-10-02 23:27:37.697 DEBUG (rank 1): Retrieved 4 logs.
+2025-10-02 23:27:37.697 DEBUG (rank 0): Retrieved 4 logs.
+2025-10-02 23:27:40.282 INFO (rank 0): Trial   3 | rf_type: gaussian | num_random_features:  8192   | length_scale:  8.000  | use_offset:  True   | rng_seed:   42    | Best trial 2 (energy 42.04 meV/atom - forces 31.9 meV/Ang)
+2025-10-02 23:27:40.484 DEBUG (rank 3): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=10.0, use_offset=True, rng_seed=42)
+2025-10-02 23:27:40.485 DEBUG (rank 2): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=10.0, use_offset=True, rng_seed=42)
+2025-10-02 23:27:40.485 DEBUG (rank 1): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=10.0, use_offset=True, rng_seed=42)
+2025-10-02 23:27:40.485 DEBUG (rank 0): Autotune iteration with RF parameters GaussianRFConfig(num_random_features=8192, length_scale=10.0, use_offset=True, rng_seed=42)
+2025-10-02 23:33:10.307 WARNING (rank 1): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:33:20.173 WARNING (rank 2): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:33:49.396 WARNING (rank 0): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:33:59.633 WARNING (rank 3): `leading_eig` normalization has high memory usage. If you encounter OOM errors try to disable it.
+2025-10-02 23:34:00.334 DEBUG (rank 3): Retrieved 4 logs.
+2025-10-02 23:34:00.334 DEBUG (rank 1): Retrieved 4 logs.
+2025-10-02 23:34:00.334 DEBUG (rank 2): Retrieved 4 logs.
+2025-10-02 23:34:00.334 DEBUG (rank 0): Retrieved 4 logs.
+2025-10-02 23:34:02.919 INFO (rank 0): Trial   4 | rf_type: gaussian | num_random_features:  8192   | length_scale: 10.000  | use_offset:  True   | rng_seed:   42    | Best trial 2 (energy 42.04 meV/atom - forces 31.9 meV/Ang)

@@ -1,0 +1,21 @@
+No extra charge + no vacuum: Potential in the slab [V], Potentential in the middle of water region [V], Fermi level [V]: 
+-13.919542382189432
+5.906931919187281
+1.3638350467
+No extra charge + no vacuum: Potential in the slab [V], Vaccum level [V]:
+-16.423274655987928
+5.2855
+Recap Neutral cell: PZC vs SHE [V], phi_0_w [V]:
+1.9853972270984954
+-1.882300354611215
+Timing [min]
+Neutral no vacuum:
+32.06315962076187
+Neutral vacuum:
+59.68597308794657
+Charge -1.5 V:
+30.041488508383434
+Charge -1.75 V:
+18.171908938884734
+Charge -2.0 V:
+19.22394769191742

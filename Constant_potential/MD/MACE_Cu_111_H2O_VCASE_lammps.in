@@ -1,0 +1,99 @@
+# LAMMPS input script
+
+# == SETUP ==
+units metal #ps A K  pressure in bars
+atom_style atomic
+
+atom_modify map yes
+newton on
+
+timer timeout 23:55:00  
+
+# == VARIABLES ==
+variable    temp_water equal 330  # Temperature of water system
+variable    temp_Cu_mobile equal 310 # Temperatureof the Cu atom (not fixed). 310 K ensures a temperature of 330 K in the outermost Cu atoms.
+variable    seed1 equal 256982574
+variable    seed2 equal 1008705
+variable    stride equal 1000
+variable    nsteps equal 2000000 # 1000 ps
+variable    tstep equal 0.0005 # 0.5fs
+
+# == DATA ==
+boundary p p p #full
+read_data Cu_H2O_VCASE.data
+mass		1 63.55   # Cu
+mass		2 2.0016  # H
+mass 		3 15.9994 # O
+
+# == Define GROUPS ==
+group H2O type 2 3 
+
+# == DEFINE FIX Cu layers ==
+variable z_fix_bottom equal 13.5 # A 
+variable z_fix_up equal 16.5# # A 
+region fixedlayer block  INF INF INF INF ${z_fix_bottom} ${z_fix_up} # 
+
+group Cuall type 1
+group fixedCu region fixedlayer
+group mobileCu subtract Cuall fixedCu
+
+# == Fix layers in the middle of the slab ==
+fix fissoCubott fixedCu setforce 0 0 0
+velocity fixedCu set 0 0 0
+
+# == Define surface layers ==
+
+variable z_surface_inf_low equal 9.0 # A
+variable z_surface_inf_high equal 10.6 # A
+region surface_inf block  INF INF INF INF ${z_surface_inf_low} ${z_surface_inf_high}
+group surf_inf_Cu region surface_inf
+
+variable z_surface_sup_low equal 19.8 # A
+variable z_surface_sup_high equal 21.0 # A
+region surface_sup block  INF INF INF INF ${z_surface_sup_low} ${z_surface_sup_high} 
+group surf_sup_Cu region surface_sup
+
+# == Define Pair Style ==
+
+pair_style mace no_domain_decomposition
+pair_coeff * * POTENTIAL_FILE Cu H O
+
+# == Define NVT thermostat == 
+
+velocity mobileCu create ${temp_Cu_mobile} ${seed1} mom yes rot yes  
+fix NVT_Cu mobileCu nvt temp ${temp_Cu_mobile} ${temp_Cu_mobile} $(100.0*dt)
+
+velocity  H2O create ${temp_water} ${seed2}
+fix NVT_H2O H2O nvt temp ${temp_water} ${temp_water} $(100.0*dt)
+
+# == Compute and Visualization ==
+
+thermo          ${stride}
+thermo_style    custom step pe ke etotal temp press vol
+thermo_modify	flush yes
+fix 		thermo_print all print ${stride} "$(step) $(pe) $(ke) $(etotal) $(temp) $(press) $(vol)" append thermo.out screen no title "#step pe ke etotal temp press vol"
+
+compute Tmobile mobileCu temp
+compute Tsurface_inf surf_inf_Cu temp
+compute Tsurface_sup surf_sup_Cu temp
+compute Twater H2O temp
+compute Tall all temp
+compute Press all pressure Tall
+
+fix myat1 mobileCu ave/time 1 1 100 c_Tmobile file temperature_mobile.dat
+fix myat2 surf_inf_Cu ave/time 1 1 100 c_Tsurface_inf file temperature_surf_inf.dat
+fix myat3 surf_sup_Cu ave/time 1 1 100 c_Tsurface_sup file temperature_surf_sup.dat
+fix myat4 H2O ave/time 1 1 100 c_Twater file temperature_water.dat
+fix myat5 all ave/time 1 1 100 c_Press[3]  file pressure_all.dat
+
+dump		viewNVT all custom ${stride} Cu_H2O_NVT_VCASE.dump id type element x y z fx fy fz
+dump_modify	viewNVT sort id append yes element Cu H O
+
+# == RUN  NVT ==
+
+timestep ${tstep}
+run		${nsteps} 
+
+write_restart	Cu_H2O_restart_VCASE.restart
+write_data Cu_H2O_restart_VCASE.data
+undump viewNVT

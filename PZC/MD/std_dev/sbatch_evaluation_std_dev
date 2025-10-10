@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH --nodes=1              # Number of nodes
+#SBATCH --ntasks-per-node=1    # Number of MPI ranks per node
+#SBATCH --gres=gpu:1          # Number of requested gpus per node
+#SBATCH --time 10:30:00        # Walltime, format: HH:MM:SS
+#SBATCH -A IscrB_ProAmmo
+#SBATCH -p boost_usr_prod
+##SBATCH --qos=boost_qos_dbg 
+#SBATCH --exclusive
+#SBATCH --export=NONE 		   # Avoid propagation of variables from the notebook submission environment
+#SBATCH --job-name='Std_dev'
+
+
+#source env
+source ~/.bashrc
+ENV_PATH="/leonardo/pub/userexternal/mbianchi/mace_v0.3.13"
+mamba activate "$ENV_PATH"
+
+#path to utils
+WORKFLOW_UTILS_PATH="../../../workflow_utils"
+
+# Compute standard deviation of the forces from an ensamble of 4 ML models
+python $WORKFLOW_UTILS_PATH/extract_std_dev_active_learning.py --DUMP_NAME ../Cu_H2O_NVT.dump --PATH_FF ../../Training/ --PREFIX_FF MACE_Cu_H2O_PZC   
+
+mamba deactivate
+
+echo "Job finished"

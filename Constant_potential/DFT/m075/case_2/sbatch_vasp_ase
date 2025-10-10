@@ -1,0 +1,78 @@
+#!/bin/bash
+#SBATCH --nodes=1           # Number of nodes
+#SBATCH --ntasks-per-node=4 # Number of MPI ranks per node
+#SBATCH --time=08:00:00     # Walltime, format: HH:MM:SS
+#SBATCH --exclusive
+#SBATCH --gres=gpu:4        # Number of requested gpus per node, can vary between 1 and 4
+#SBATCH -A IscrB_ProAmmo
+#SBATCH --partition=boost_usr_prod
+##SBATCH --qos=boost_qos_dbg
+#SBATCH --export=NONE 		   # Avoid propagation of variables from the notebook submission environment
+#SBATCH --job-name='m075_case_2' 
+
+##### 1) General settings
+export OMP_NUM_THREADS=1
+
+# Load VASP module
+module load profile/chem-phys
+module load vasp
+
+# Activate environment
+mamba init
+source ~/.bashrc
+
+# Specify your conda env with ASE and the DoubleReferenceMethod package installed
+mamba activate /leonardo/home/userexternal/mbianchi/miniforge3/envs/test_FCP/
+
+# Export VASP Command and the path for the Pseudopotential directory
+export ASE_VASP_COMMAND="mpirun -np ${SLURM_NTASKS} vasp_std"
+#Specify the path for your Pseudo-potential folder
+export VASP_PP_PATH=/leonardo/home/userexternal/mbianchi/pseudo/Pseudo_VASP
+
+#### 2) Specific settings for the Double Reference workflow
+
+# Path for Bader code and utils
+# Specify your path
+Bader_code_path="/leonardo/home/userexternal/mbianchi/Bader"
+Bader_util_path="/leonardo/home/userexternal/mbianchi/Bader/vtstscripts-1033"
+
+# Path for the python script implementing the Double Reference Method workflow
+# Customize your VASP setting inside it
+DoubleReference_script="DoubleRefernceWorkflow_Const_Pot.py"
+
+# Path for the POSCAR
+Poscar_path=../../../DEAL/POSCAR_temp/m075
+
+# Specify folder that will be create for the whole calculation
+folder="case_2"
+
+
+#### 3) Start Double Reference Method workflow
+
+
+# Create folder for the calculation and copy inside it the different files
+mkdir $folder
+
+cp $DoubleReference_script $folder/
+cp $Bader_code_path/bader $folder/
+cp $Bader_util_path/chgsum.pl $folder/
+cp $Poscar_path/POSCAR_2 $folder/POSCAR
+
+
+# Enter in the working directory and start the computation
+cd $folder
+python $DoubleReference_script 
+
+
+# Clean up of the subfolder after the calculation end
+# Do NOT change the name of the subfolders
+rm -r neutral
+rm -r neutral_vacuum
+rm -r charge
+rm chgsum.pl
+rm bader
+
+# Come back in the starting folder
+cd ..
+
+mamba deactivate

@@ -1,0 +1,40 @@
+#!/bin/bash
+#SBATCH --account=IscrB_ProAmmo
+#SBATCH --partition=boost_usr_prod  # partition to be used
+#SBATCH --time 12:00:00             # format: HH:MM:SS
+##SBATCH --qos=boost_qos_dbg
+#SBATCH --qos=boost_qos_lprod
+#SBATCH --nodes=1                   # node
+#SBATCH --ntasks-per-node=1         # tasks out of 32
+#SBATCH --gres=gpu:1                # gpus per node out of 4
+#SBATCH --cpus-per-task=1
+#SBATCH --job-name='MD_m075'
+############################
+
+
+#source env
+echo "sourcing environments"
+
+#Make sure to load the right modules for your job
+module load profile/base                                                               
+module load gcc/12.2.0 
+module load gsl/2.7.1--intel-oneapi-mpi--2021.12.1--oneapi--2024.1.0
+module load openmpi/4.1.6--gcc--12.2.0-cuda-12.2
+module load fftw/3.3.10--openmpi--4.1.6--gcc--12.2.0-spack0.22
+module load openblas/0.3.26--gcc--12.2.0
+module load cuda/12.2       
+
+. /leonardo/pub/userexternal/lbonati1/software/plumed/plumed2-2.9-gcc12/sourceme.sh 
+       
+#running
+echo "running job"
+   in_file=MACE_Cu_111_H2O_m075_lammps.in
+   log_file='log.lammps'
+   # Path to LAMMPS executable
+   lmp='/leonardo/pub/userexternal/lbonati1/software/lammps-mace/lammps/build-ampere-plumed/lmp'
+
+
+   srun $lmp -k on g 1 t ${SLURM_CPUS_PER_TASK} -sf kk -i $in_file -l $log_file
+
+
+echo "job finished"

@@ -1,0 +1,72 @@
+#!/bin/bash
+#SBATCH --nodes=1              # Number of nodes
+#SBATCH --ntasks-per-node=4    # Number of MPI ranks per node
+#SBATCH --gres=gpu:4           # Number of requested gpus per node
+#SBATCH --ntasks=4
+#SBATCH --gpus-per-node=4
+#SBATCH --cpus-per-task=8 
+#SBATCH --time 24:00:00        # Walltime, format: HH:MM:SS
+#SBATCH -A IscrB_ProAmmo
+#SBATCH -p boost_usr_prod
+#SBATCH --exclusive
+#SBATCH --export=NONE 		   # Avoid propagation of variables from the notebook submission environment
+#SBATCH --job-name='train_NUM_MODEL'
+
+
+# source env
+
+source ~/.bashrc
+#mamba init
+ENV_PATH="/leonardo/pub/userexternal/mbianchi/mace_v0.3.13"
+conda activate "$ENV_PATH"
+
+# Dataset pre-processing (required for Multi-GPU training)
+mkdir processed_data
+
+python $ENV_PATH/lib/python3.13/site-packages/mace/cli/preprocess_data.py \
+    --train_file="train_model_NUM_MODEL.xyz" \
+    --valid_file="val_model_NUM_MODEL.xyz"\
+	--energy_key='DFT_energy'\
+	--forces_key='DFT_forces'\
+    --atomic_numbers="[1, 8, 29]" \
+    --r_max=6 \
+    --h5_prefix="processed_data/" \
+    --compute_statistics \
+    --E0s="average" \
+    --seed=558 \
+
+
+# Training
+echo $CUDA_VISIBLE_DEVICES
+echo $SLURM_GPUS_ON_NODE
+export CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES
+
+srun python $ENV_PATH/lib/python3.13/site-packages/mace/cli/run_train.py \
+    --name="MACE_Cu_H2O_PZC_NUM_MODEL" \
+    --train_file="./processed_data/train" \
+	--valid_file="./processed_data/val" \
+	--statistics_file="./processed_data/statistics.json" \
+    --energy_key='DFT_energy'\
+	--forces_key='DFT_forces'\
+    --config_type_weights='{"Default":1.0}' \
+    --model="MACE" \
+    --r_max=6 \
+    --max_L=0 \
+	--num_channels=256 \
+    --batch_size=4 \
+    --max_num_epochs=800 \
+    --valid_batch_size=4 \
+    --patience=20 \
+    --eval_interval=5 \
+    --swa \
+    --start_swa=640 \
+    --ema \
+    --ema_decay=0.99 \
+    --amsgrad \
+    --restart_latest \
+    --device=cuda \
+    --seed=SEED_NUMBER \
+    --default_dtype="float32"\
+	--distributed\
+	--num_workers=8\
+    --save_cpu

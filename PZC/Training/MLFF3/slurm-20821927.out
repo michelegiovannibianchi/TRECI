@@ -1,0 +1,429 @@
+mkdir: cannot create directory ‘processed_data’: File exists
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+2025-09-29 13:20:13 INFO     Training set 1/1 [energy: 1892, stress: 0, virials: 0, dipole components: 0, head: 1892, forces: 1892, charges: 0]
+2025-09-29 13:20:13 INFO     Total Training set [energy: 1892, stress: 0, virials: 0, dipole components: 0, head: 1892, forces: 1892, charges: 0]
+2025-09-29 13:20:14 INFO     Validation set 1/1 [energy: 331, stress: 0, virials: 0, dipole components: 0, head: 331, forces: 331, charges: 0]
+2025-09-29 13:20:14 INFO     Total Validation set [energy: 331, stress: 0, virials: 0, dipole components: 0, head: 331, forces: 331, charges: 0]
+2025-09-29 13:20:14 INFO     Using atomic numbers from command line argument
+2025-09-29 13:20:14 INFO     Preparing training set
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2025-09-29 13:20:15 INFO     Computing statistics
+2025-09-29 13:20:15 INFO     Isolated Atomic Energies (E0s) not in training file, using command line argument
+2025-09-29 13:20:15 INFO     Computing average Atomic Energies using least squares regression
+2025-09-29 13:20:15 INFO     Atomic Energies: [-2.0811519809530403, -11.558405683517437, -10.617046012835463]
+  0%|          | 0/8 [00:00<?, ?it/s]100%|██████████| 8/8 [00:00<00:00, 119410.79it/s]
+2025-09-29 13:22:02 INFO     Average number of neighbors: 84.44485569000244
+2025-09-29 13:22:02 INFO     Mean: 0.0008558895788155496
+2025-09-29 13:22:02 INFO     Standard deviation: 0.9814406037330627
+2025-09-29 13:22:02 INFO     Preparing validation set
+0,1,2,3
+4
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Cuda avail= True
+#cuda device= 4
+2025-09-29 13:22:08.941 INFO: ===========VERIFYING SETTINGS===========
+2025-09-29 13:22:09.093 INFO: Stage Two is activated as start_stage_two was defined
+2025-09-29 13:22:09.095 INFO: Process group initialized: True
+2025-09-29 13:22:09.095 INFO: Processes: 4
+2025-09-29 13:22:09.095 INFO: MACE version: 0.3.14
+2025-09-29 13:22:09.095 INFO: CUDA version: 12.6, CUDA device: 0
+2025-09-29 13:22:09.190 INFO: ===========LOADING INPUT DATA===========
+2025-09-29 13:22:09.190 INFO: Using heads: ['Default']
+2025-09-29 13:22:09.190 INFO: Using the key specifications to parse data:
+2025-09-29 13:22:09.190 INFO: Default: KeySpecification(info_keys={'energy': 'DFT_energy', 'stress': 'REF_stress', 'virials': 'REF_virials', 'dipole': 'dipole', 'head': 'head'}, arrays_keys={'forces': 'DFT_forces', 'charges': 'REF_charges'})
+2025-09-29 13:22:09.190 INFO: =============    Processing head Default     ===========
+2025-09-29 13:22:09.191 INFO: Using statistics json file
+2025-09-29 13:22:09.193 INFO: Using atomic numbers from statistics file
+2025-09-29 13:22:09.194 INFO: Atomic Numbers used: [1, 8, 29]
+2025-09-29 13:22:09.194 INFO: Atomic Energies used (z: eV) for head Default: {1: -2.0811519809530403, 8: -11.558405683517437, 29: -10.617046012835463}
+2025-09-29 13:22:09.194 INFO: Processing datasets for head 'Default'
+2025-09-29 13:22:09.198 INFO: Loading HDF5 dataset from directory ./processed_data/train
+2025-09-29 13:22:09.206 INFO: Combining 1 Dataset objects for head 'Default'
+2025-09-29 13:22:09.212 INFO: Loading HDF5 dataset from directory ./processed_data/val
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Cuda avail= True
+#cuda device= 4
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Cuda avail= True
+#cuda device= 4
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Cuda avail= True
+#cuda device= 4
+2025-09-29 13:22:09.296 INFO: Combining 1 Dataset objects for head 'Default_valid'
+2025-09-29 13:22:09.296 INFO: Combined validation datasets for Default
+2025-09-29 13:22:09.297 INFO: Head 'Default' training dataset size: 1892
+2025-09-29 13:22:09.297 INFO: Average number of neighbors: 84.44485569000244
+2025-09-29 13:22:09.297 INFO: During training the following quantities will be reported: energy, forces
+2025-09-29 13:22:09.297 INFO: ===========MODEL DETAILS===========
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+2025-09-29 13:22:10.729 INFO: Building model
+2025-09-29 13:22:10.729 INFO: Message passing with 256 channels and max_L=0 (256x0e)
+2025-09-29 13:22:10.729 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2025-09-29 13:22:10.729 INFO: 8 radial and 5 basis functions
+2025-09-29 13:22:10.729 INFO: Radial cutoff: 6.0 A (total receptive field for each atom: 12.0 A)
+2025-09-29 13:22:10.729 INFO: Distance transform for radial basis functions: None
+2025-09-29 13:22:10.729 INFO: Hidden irreps: 256x0e
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+Using reduced CG: False
+Using reduced CG: False
+2025-09-29 13:22:11.501 INFO: Total number of parameters: 1966096
+2025-09-29 13:22:11.501 INFO: 
+2025-09-29 13:22:11.501 INFO: ===========OPTIMIZER INFORMATION===========
+2025-09-29 13:22:11.501 INFO: Using ADAM as parameter optimizer
+2025-09-29 13:22:11.501 INFO: Batch size: 4
+2025-09-29 13:22:11.501 INFO: Using Exponential Moving Average with decay: 0.99
+2025-09-29 13:22:11.501 INFO: Number of gradient updates: 378400
+2025-09-29 13:22:11.501 INFO: Learning rate: 0.01, weight decay: 5e-07
+2025-09-29 13:22:11.501 INFO: WeightedEnergyForcesLoss(energy_weight=1.000, forces_weight=100.000)
+2025-09-29 13:22:11.502 INFO: Stage Two (after 640 epochs) with loss function: WeightedEnergyForcesLoss(energy_weight=1000.000, forces_weight=100.000), with energy weight : 1000.0, forces weight : 100.0 and learning rate : 0.001
+2025-09-29 13:22:11.565 WARNING: Cannot find checkpoint with tag 'MACE_Cu_H2O_PZC_3_run-420' in './checkpoints'
+2025-09-29 13:22:11.956 INFO: Using gradient clipping with tolerance=10.000
+2025-09-29 13:22:11.956 INFO: 
+2025-09-29 13:22:11.956 INFO: ===========TRAINING===========
+2025-09-29 13:22:11.956 INFO: Started training, reporting errors on validation set
+2025-09-29 13:22:11.956 INFO: Loss metrics on validation set
+Using reduced CG: False
+Using reduced CG: False
+Using reduced CG: False
+Using reduced CG: False
+Using reduced CG: False
+Using reduced CG: False
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+2025-09-29 13:22:17.539 INFO: Initial: head: Default, loss=23.71479034, RMSE_E_per_atom=   23.96 meV, RMSE_F=  966.03 meV / A
+2025-09-29 13:22:47.359 INFO: Epoch 0: head: Default, loss=1.03797364, RMSE_E_per_atom=  574.30 meV, RMSE_F=  193.76 meV / A
+2025-09-29 13:24:55.077 INFO: Epoch 5: head: Default, loss=0.16893680, RMSE_E_per_atom=  125.73 meV, RMSE_F=   80.53 meV / A
+2025-09-29 13:27:20.271 INFO: Epoch 10: head: Default, loss=0.08687550, RMSE_E_per_atom=   47.72 meV, RMSE_F=   58.28 meV / A
+2025-09-29 13:29:29.722 INFO: Epoch 15: head: Default, loss=0.06136674, RMSE_E_per_atom=   29.99 meV, RMSE_F=   49.06 meV / A
+2025-09-29 13:32:12.196 INFO: Epoch 20: head: Default, loss=0.05105166, RMSE_E_per_atom=   22.87 meV, RMSE_F=   44.77 meV / A
+2025-09-29 13:34:31.966 INFO: Epoch 25: head: Default, loss=0.04404973, RMSE_E_per_atom=   14.90 meV, RMSE_F=   41.62 meV / A
+2025-09-29 13:36:41.671 INFO: Epoch 30: head: Default, loss=0.03798451, RMSE_E_per_atom=   13.48 meV, RMSE_F=   38.65 meV / A
+2025-09-29 13:38:49.523 INFO: Epoch 35: head: Default, loss=0.03627162, RMSE_E_per_atom=   17.58 meV, RMSE_F=   37.73 meV / A
+2025-09-29 13:40:58.067 INFO: Epoch 40: head: Default, loss=0.03165731, RMSE_E_per_atom=   12.80 meV, RMSE_F=   35.27 meV / A
+2025-09-29 13:43:05.883 INFO: Epoch 45: head: Default, loss=0.03130025, RMSE_E_per_atom=   15.94 meV, RMSE_F=   35.04 meV / A
+2025-09-29 13:45:13.531 INFO: Epoch 50: head: Default, loss=0.02715131, RMSE_E_per_atom=   12.60 meV, RMSE_F=   32.67 meV / A
+2025-09-29 13:47:22.209 INFO: Epoch 55: head: Default, loss=0.02757447, RMSE_E_per_atom=   14.67 meV, RMSE_F=   32.90 meV / A
+2025-09-29 13:49:29.590 INFO: Epoch 60: head: Default, loss=0.02548374, RMSE_E_per_atom=   14.10 meV, RMSE_F=   31.62 meV / A
+2025-09-29 13:51:43.983 INFO: Epoch 65: head: Default, loss=0.02325105, RMSE_E_per_atom=   10.80 meV, RMSE_F=   30.22 meV / A
+2025-09-29 13:54:01.016 INFO: Epoch 70: head: Default, loss=0.02303631, RMSE_E_per_atom=   12.61 meV, RMSE_F=   30.07 meV / A
+2025-09-29 13:56:27.202 INFO: Epoch 75: head: Default, loss=0.02146812, RMSE_E_per_atom=   11.10 meV, RMSE_F=   29.04 meV / A
+2025-09-29 13:58:47.888 INFO: Epoch 80: head: Default, loss=0.02123119, RMSE_E_per_atom=   11.28 meV, RMSE_F=   28.87 meV / A
+2025-09-29 14:01:04.877 INFO: Epoch 85: head: Default, loss=0.02098323, RMSE_E_per_atom=   11.39 meV, RMSE_F=   28.70 meV / A
+2025-09-29 14:03:17.863 INFO: Epoch 90: head: Default, loss=0.01903856, RMSE_E_per_atom=   10.57 meV, RMSE_F=   27.34 meV / A
+2025-09-29 14:05:29.440 INFO: Epoch 95: head: Default, loss=0.01920425, RMSE_E_per_atom=   10.14 meV, RMSE_F=   27.45 meV / A
+2025-09-29 14:07:37.162 INFO: Epoch 100: head: Default, loss=0.01963129, RMSE_E_per_atom=   11.13 meV, RMSE_F=   27.76 meV / A
+2025-09-29 14:09:44.815 INFO: Epoch 105: head: Default, loss=0.01884899, RMSE_E_per_atom=   11.87 meV, RMSE_F=   27.21 meV / A
+2025-09-29 14:11:52.440 INFO: Epoch 110: head: Default, loss=0.01863809, RMSE_E_per_atom=   11.08 meV, RMSE_F=   27.05 meV / A
+2025-09-29 14:14:00.263 INFO: Epoch 115: head: Default, loss=0.01826787, RMSE_E_per_atom=   10.83 meV, RMSE_F=   26.78 meV / A
+2025-09-29 14:16:08.120 INFO: Epoch 120: head: Default, loss=0.01727387, RMSE_E_per_atom=    9.78 meV, RMSE_F=   26.05 meV / A
+2025-09-29 14:18:15.533 INFO: Epoch 125: head: Default, loss=0.01715831, RMSE_E_per_atom=    9.65 meV, RMSE_F=   25.96 meV / A
+2025-09-29 14:20:23.344 INFO: Epoch 130: head: Default, loss=0.01705805, RMSE_E_per_atom=    9.45 meV, RMSE_F=   25.88 meV / A
+2025-09-29 14:22:31.097 INFO: Epoch 135: head: Default, loss=0.01707785, RMSE_E_per_atom=   10.01 meV, RMSE_F=   25.88 meV / A
+2025-09-29 14:24:38.419 INFO: Epoch 140: head: Default, loss=0.01776168, RMSE_E_per_atom=   11.79 meV, RMSE_F=   26.39 meV / A
+2025-09-29 14:26:45.732 INFO: Epoch 145: head: Default, loss=0.01597641, RMSE_E_per_atom=    9.09 meV, RMSE_F=   25.05 meV / A
+2025-09-29 14:28:53.411 INFO: Epoch 150: head: Default, loss=0.01570829, RMSE_E_per_atom=    8.91 meV, RMSE_F=   24.84 meV / A
+2025-09-29 14:31:00.797 INFO: Epoch 155: head: Default, loss=0.01575268, RMSE_E_per_atom=    8.67 meV, RMSE_F=   24.88 meV / A
+2025-09-29 14:33:08.416 INFO: Epoch 160: head: Default, loss=0.01495970, RMSE_E_per_atom=    8.54 meV, RMSE_F=   24.24 meV / A
+2025-09-29 14:35:15.727 INFO: Epoch 165: head: Default, loss=0.01526106, RMSE_E_per_atom=    8.62 meV, RMSE_F=   24.49 meV / A
+2025-09-29 14:37:24.022 INFO: Epoch 170: head: Default, loss=0.01569955, RMSE_E_per_atom=    9.15 meV, RMSE_F=   24.82 meV / A
+2025-09-29 14:39:31.180 INFO: Epoch 175: head: Default, loss=0.01449867, RMSE_E_per_atom=    8.05 meV, RMSE_F=   23.87 meV / A
+2025-09-29 14:41:38.841 INFO: Epoch 180: head: Default, loss=0.01483804, RMSE_E_per_atom=    8.61 meV, RMSE_F=   24.14 meV / A
+2025-09-29 14:43:46.448 INFO: Epoch 185: head: Default, loss=0.01437786, RMSE_E_per_atom=    8.47 meV, RMSE_F=   23.76 meV / A
+2025-09-29 14:45:54.608 INFO: Epoch 190: head: Default, loss=0.01434145, RMSE_E_per_atom=    8.08 meV, RMSE_F=   23.74 meV / A
+2025-09-29 14:48:02.454 INFO: Epoch 195: head: Default, loss=0.01448205, RMSE_E_per_atom=    8.02 meV, RMSE_F=   23.86 meV / A
+2025-09-29 14:50:10.370 INFO: Epoch 200: head: Default, loss=0.01415823, RMSE_E_per_atom=    8.04 meV, RMSE_F=   23.58 meV / A
+2025-09-29 14:52:17.816 INFO: Epoch 205: head: Default, loss=0.01366014, RMSE_E_per_atom=    7.69 meV, RMSE_F=   23.18 meV / A
+2025-09-29 14:54:30.979 INFO: Epoch 210: head: Default, loss=0.01362769, RMSE_E_per_atom=    7.71 meV, RMSE_F=   23.14 meV / A
+2025-09-29 14:57:04.896 INFO: Epoch 215: head: Default, loss=0.01382628, RMSE_E_per_atom=    7.90 meV, RMSE_F=   23.31 meV / A
+2025-09-29 14:59:57.594 INFO: Epoch 220: head: Default, loss=0.01348950, RMSE_E_per_atom=    7.35 meV, RMSE_F=   23.03 meV / A
+2025-09-29 15:02:28.456 INFO: Epoch 225: head: Default, loss=0.01325574, RMSE_E_per_atom=    7.12 meV, RMSE_F=   22.83 meV / A
+2025-09-29 15:05:27.746 INFO: Epoch 230: head: Default, loss=0.01393347, RMSE_E_per_atom=    7.71 meV, RMSE_F=   23.39 meV / A
+2025-09-29 15:08:01.504 INFO: Epoch 235: head: Default, loss=0.01355206, RMSE_E_per_atom=    7.48 meV, RMSE_F=   23.08 meV / A
+2025-09-29 15:10:10.720 INFO: Epoch 240: head: Default, loss=0.01305258, RMSE_E_per_atom=    7.18 meV, RMSE_F=   22.64 meV / A
+2025-09-29 15:12:19.194 INFO: Epoch 245: head: Default, loss=0.01296652, RMSE_E_per_atom=    6.84 meV, RMSE_F=   22.58 meV / A
+2025-09-29 15:14:27.242 INFO: Epoch 250: head: Default, loss=0.01272111, RMSE_E_per_atom=    6.92 meV, RMSE_F=   22.36 meV / A
+2025-09-29 15:16:34.435 INFO: Epoch 255: head: Default, loss=0.01286996, RMSE_E_per_atom=    6.93 meV, RMSE_F=   22.49 meV / A
+2025-09-29 15:18:42.376 INFO: Epoch 260: head: Default, loss=0.01257136, RMSE_E_per_atom=    6.76 meV, RMSE_F=   22.24 meV / A
+2025-09-29 15:20:49.953 INFO: Epoch 265: head: Default, loss=0.01233094, RMSE_E_per_atom=    6.60 meV, RMSE_F=   22.03 meV / A
+2025-09-29 15:22:57.747 INFO: Epoch 270: head: Default, loss=0.01249475, RMSE_E_per_atom=    7.07 meV, RMSE_F=   22.16 meV / A
+2025-09-29 15:25:05.419 INFO: Epoch 275: head: Default, loss=0.01239818, RMSE_E_per_atom=    6.64 meV, RMSE_F=   22.08 meV / A
+2025-09-29 15:27:13.405 INFO: Epoch 280: head: Default, loss=0.01232047, RMSE_E_per_atom=    6.80 meV, RMSE_F=   22.01 meV / A
+2025-09-29 15:29:21.185 INFO: Epoch 285: head: Default, loss=0.01226615, RMSE_E_per_atom=    6.81 meV, RMSE_F=   21.96 meV / A
+2025-09-29 15:31:28.737 INFO: Epoch 290: head: Default, loss=0.01259328, RMSE_E_per_atom=    7.18 meV, RMSE_F=   22.25 meV / A
+2025-09-29 15:33:36.293 INFO: Epoch 295: head: Default, loss=0.01219865, RMSE_E_per_atom=    6.62 meV, RMSE_F=   21.91 meV / A
+2025-09-29 15:35:43.755 INFO: Epoch 300: head: Default, loss=0.01217318, RMSE_E_per_atom=    6.48 meV, RMSE_F=   21.88 meV / A
+2025-09-29 15:37:51.445 INFO: Epoch 305: head: Default, loss=0.01216245, RMSE_E_per_atom=    6.58 meV, RMSE_F=   21.87 meV / A
+2025-09-29 15:39:59.511 INFO: Epoch 310: head: Default, loss=0.01192002, RMSE_E_per_atom=    6.32 meV, RMSE_F=   21.66 meV / A
+2025-09-29 15:42:07.352 INFO: Epoch 315: head: Default, loss=0.01186058, RMSE_E_per_atom=    6.30 meV, RMSE_F=   21.61 meV / A
+2025-09-29 15:44:14.760 INFO: Epoch 320: head: Default, loss=0.01155174, RMSE_E_per_atom=    6.06 meV, RMSE_F=   21.33 meV / A
+2025-09-29 15:46:22.404 INFO: Epoch 325: head: Default, loss=0.01159127, RMSE_E_per_atom=    6.46 meV, RMSE_F=   21.36 meV / A
+2025-09-29 15:48:29.996 INFO: Epoch 330: head: Default, loss=0.01170151, RMSE_E_per_atom=    6.52 meV, RMSE_F=   21.46 meV / A
+2025-09-29 15:50:37.380 INFO: Epoch 335: head: Default, loss=0.01159551, RMSE_E_per_atom=    6.14 meV, RMSE_F=   21.37 meV / A
+2025-09-29 15:52:45.358 INFO: Epoch 340: head: Default, loss=0.01151862, RMSE_E_per_atom=    6.01 meV, RMSE_F=   21.29 meV / A
+2025-09-29 15:54:53.573 INFO: Epoch 345: head: Default, loss=0.01143832, RMSE_E_per_atom=    5.95 meV, RMSE_F=   21.22 meV / A
+2025-09-29 15:57:01.167 INFO: Epoch 350: head: Default, loss=0.01166153, RMSE_E_per_atom=    6.27 meV, RMSE_F=   21.43 meV / A
+2025-09-29 15:59:08.502 INFO: Epoch 355: head: Default, loss=0.01140182, RMSE_E_per_atom=    5.94 meV, RMSE_F=   21.19 meV / A
+2025-09-29 16:01:16.284 INFO: Epoch 360: head: Default, loss=0.01134125, RMSE_E_per_atom=    5.95 meV, RMSE_F=   21.14 meV / A
+2025-09-29 16:03:23.888 INFO: Epoch 365: head: Default, loss=0.01149731, RMSE_E_per_atom=    5.99 meV, RMSE_F=   21.27 meV / A
+2025-09-29 16:05:31.451 INFO: Epoch 370: head: Default, loss=0.01127987, RMSE_E_per_atom=    5.72 meV, RMSE_F=   21.07 meV / A
+2025-09-29 16:07:38.968 INFO: Epoch 375: head: Default, loss=0.01121664, RMSE_E_per_atom=    6.15 meV, RMSE_F=   21.02 meV / A
+2025-09-29 16:09:47.178 INFO: Epoch 380: head: Default, loss=0.01132370, RMSE_E_per_atom=    6.49 meV, RMSE_F=   21.12 meV / A
+2025-09-29 16:11:54.916 INFO: Epoch 385: head: Default, loss=0.01113576, RMSE_E_per_atom=    5.92 meV, RMSE_F=   20.94 meV / A
+2025-09-29 16:14:02.849 INFO: Epoch 390: head: Default, loss=0.01150654, RMSE_E_per_atom=    6.34 meV, RMSE_F=   21.29 meV / A
+2025-09-29 16:16:10.345 INFO: Epoch 395: head: Default, loss=0.01122205, RMSE_E_per_atom=    6.03 meV, RMSE_F=   21.02 meV / A
+2025-09-29 16:18:18.008 INFO: Epoch 400: head: Default, loss=0.01091509, RMSE_E_per_atom=    5.94 meV, RMSE_F=   20.74 meV / A
+2025-09-29 16:20:25.596 INFO: Epoch 405: head: Default, loss=0.01109783, RMSE_E_per_atom=    5.64 meV, RMSE_F=   20.91 meV / A
+2025-09-29 16:22:33.456 INFO: Epoch 410: head: Default, loss=0.01099863, RMSE_E_per_atom=    5.70 meV, RMSE_F=   20.82 meV / A
+2025-09-29 16:24:40.980 INFO: Epoch 415: head: Default, loss=0.01087305, RMSE_E_per_atom=    5.59 meV, RMSE_F=   20.71 meV / A
+2025-09-29 16:26:48.817 INFO: Epoch 420: head: Default, loss=0.01071148, RMSE_E_per_atom=    5.68 meV, RMSE_F=   20.55 meV / A
+2025-09-29 16:28:56.708 INFO: Epoch 425: head: Default, loss=0.01075421, RMSE_E_per_atom=    5.76 meV, RMSE_F=   20.59 meV / A
+2025-09-29 16:31:04.628 INFO: Epoch 430: head: Default, loss=0.01083177, RMSE_E_per_atom=    5.50 meV, RMSE_F=   20.66 meV / A
+2025-09-29 16:33:12.254 INFO: Epoch 435: head: Default, loss=0.01064105, RMSE_E_per_atom=    5.55 meV, RMSE_F=   20.48 meV / A
+2025-09-29 16:35:20.417 INFO: Epoch 440: head: Default, loss=0.01075396, RMSE_E_per_atom=    5.79 meV, RMSE_F=   20.59 meV / A
+2025-09-29 16:37:28.044 INFO: Epoch 445: head: Default, loss=0.01066517, RMSE_E_per_atom=    5.61 meV, RMSE_F=   20.50 meV / A
+2025-09-29 16:39:35.383 INFO: Epoch 450: head: Default, loss=0.01068889, RMSE_E_per_atom=    6.10 meV, RMSE_F=   20.53 meV / A
+2025-09-29 16:41:42.362 INFO: Epoch 455: head: Default, loss=0.01060156, RMSE_E_per_atom=    5.65 meV, RMSE_F=   20.44 meV / A
+2025-09-29 16:43:50.231 INFO: Epoch 460: head: Default, loss=0.01058008, RMSE_E_per_atom=    5.54 meV, RMSE_F=   20.42 meV / A
+2025-09-29 16:45:57.928 INFO: Epoch 465: head: Default, loss=0.01065138, RMSE_E_per_atom=    5.71 meV, RMSE_F=   20.49 meV / A
+2025-09-29 16:48:05.588 INFO: Epoch 470: head: Default, loss=0.01062229, RMSE_E_per_atom=    5.89 meV, RMSE_F=   20.47 meV / A
+2025-09-29 16:50:13.998 INFO: Epoch 475: head: Default, loss=0.01072916, RMSE_E_per_atom=    5.49 meV, RMSE_F=   20.56 meV / A
+2025-09-29 16:52:21.785 INFO: Epoch 480: head: Default, loss=0.01051752, RMSE_E_per_atom=    5.30 meV, RMSE_F=   20.37 meV / A
+2025-09-29 16:54:29.458 INFO: Epoch 485: head: Default, loss=0.01036206, RMSE_E_per_atom=    5.15 meV, RMSE_F=   20.22 meV / A
+2025-09-29 16:56:37.474 INFO: Epoch 490: head: Default, loss=0.01060542, RMSE_E_per_atom=    6.55 meV, RMSE_F=   20.44 meV / A
+2025-09-29 16:58:45.350 INFO: Epoch 495: head: Default, loss=0.01045620, RMSE_E_per_atom=    5.52 meV, RMSE_F=   20.31 meV / A
+2025-09-29 17:00:52.985 INFO: Epoch 500: head: Default, loss=0.01045991, RMSE_E_per_atom=    5.29 meV, RMSE_F=   20.31 meV / A
+2025-09-29 17:03:00.894 INFO: Epoch 505: head: Default, loss=0.01040077, RMSE_E_per_atom=    5.10 meV, RMSE_F=   20.26 meV / A
+2025-09-29 17:05:08.844 INFO: Epoch 510: head: Default, loss=0.01041041, RMSE_E_per_atom=    5.39 meV, RMSE_F=   20.26 meV / A
+2025-09-29 17:07:16.500 INFO: Epoch 515: head: Default, loss=0.01031778, RMSE_E_per_atom=    5.12 meV, RMSE_F=   20.17 meV / A
+2025-09-29 17:09:23.945 INFO: Epoch 520: head: Default, loss=0.01022336, RMSE_E_per_atom=    5.07 meV, RMSE_F=   20.08 meV / A
+2025-09-29 17:11:31.508 INFO: Epoch 525: head: Default, loss=0.01012835, RMSE_E_per_atom=    4.96 meV, RMSE_F=   19.99 meV / A
+2025-09-29 17:13:39.091 INFO: Epoch 530: head: Default, loss=0.01031474, RMSE_E_per_atom=    4.92 meV, RMSE_F=   20.17 meV / A
+2025-09-29 17:15:46.937 INFO: Epoch 535: head: Default, loss=0.01026097, RMSE_E_per_atom=    5.00 meV, RMSE_F=   20.11 meV / A
+2025-09-29 17:17:54.719 INFO: Epoch 540: head: Default, loss=0.01040936, RMSE_E_per_atom=    5.41 meV, RMSE_F=   20.26 meV / A
+2025-09-29 17:20:02.537 INFO: Epoch 545: head: Default, loss=0.01015912, RMSE_E_per_atom=    5.02 meV, RMSE_F=   20.02 meV / A
+2025-09-29 17:22:10.608 INFO: Epoch 550: head: Default, loss=0.01009562, RMSE_E_per_atom=    5.09 meV, RMSE_F=   19.95 meV / A
+2025-09-29 17:24:18.758 INFO: Epoch 555: head: Default, loss=0.00996025, RMSE_E_per_atom=    4.95 meV, RMSE_F=   19.83 meV / A
+2025-09-29 17:26:26.525 INFO: Epoch 560: head: Default, loss=0.01003665, RMSE_E_per_atom=    4.69 meV, RMSE_F=   19.90 meV / A
+2025-09-29 17:28:34.049 INFO: Epoch 565: head: Default, loss=0.01000139, RMSE_E_per_atom=    4.98 meV, RMSE_F=   19.86 meV / A
+2025-09-29 17:30:41.673 INFO: Epoch 570: head: Default, loss=0.00995094, RMSE_E_per_atom=    4.83 meV, RMSE_F=   19.82 meV / A
+2025-09-29 17:32:49.075 INFO: Epoch 575: head: Default, loss=0.01008490, RMSE_E_per_atom=    5.04 meV, RMSE_F=   19.94 meV / A
+2025-09-29 17:34:56.645 INFO: Epoch 580: head: Default, loss=0.00997542, RMSE_E_per_atom=    4.96 meV, RMSE_F=   19.84 meV / A
+2025-09-29 17:37:04.382 INFO: Epoch 585: head: Default, loss=0.00991102, RMSE_E_per_atom=    5.06 meV, RMSE_F=   19.77 meV / A
+2025-09-29 17:39:12.554 INFO: Epoch 590: head: Default, loss=0.00997000, RMSE_E_per_atom=    5.16 meV, RMSE_F=   19.84 meV / A
+2025-09-29 17:41:20.174 INFO: Epoch 595: head: Default, loss=0.00996019, RMSE_E_per_atom=    5.10 meV, RMSE_F=   19.82 meV / A
+2025-09-29 17:43:28.771 INFO: Epoch 600: head: Default, loss=0.01018921, RMSE_E_per_atom=    5.24 meV, RMSE_F=   20.05 meV / A
+2025-09-29 17:45:36.094 INFO: Epoch 605: head: Default, loss=0.00986553, RMSE_E_per_atom=    4.66 meV, RMSE_F=   19.73 meV / A
+2025-09-29 17:47:43.778 INFO: Epoch 610: head: Default, loss=0.00982268, RMSE_E_per_atom=    4.82 meV, RMSE_F=   19.69 meV / A
+2025-09-29 17:49:51.626 INFO: Epoch 615: head: Default, loss=0.00983758, RMSE_E_per_atom=    4.70 meV, RMSE_F=   19.70 meV / A
+2025-09-29 17:51:59.441 INFO: Epoch 620: head: Default, loss=0.00977158, RMSE_E_per_atom=    4.89 meV, RMSE_F=   19.64 meV / A
+2025-09-29 17:54:06.853 INFO: Epoch 625: head: Default, loss=0.00985621, RMSE_E_per_atom=    5.00 meV, RMSE_F=   19.72 meV / A
+2025-09-29 17:56:14.731 INFO: Epoch 630: head: Default, loss=0.00970745, RMSE_E_per_atom=    4.69 meV, RMSE_F=   19.57 meV / A
+2025-09-29 17:58:22.518 INFO: Epoch 635: head: Default, loss=0.00973605, RMSE_E_per_atom=    4.62 meV, RMSE_F=   19.60 meV / A
+2025-09-29 18:00:03.237 INFO: Changing loss based on Stage Two Weights
+2025-09-29 18:00:30.184 INFO: Epoch 640: head: Default, loss=0.01200928, RMSE_E_per_atom=    2.58 meV, RMSE_F=   20.15 meV / A
+2025-09-29 18:02:38.338 INFO: Epoch 645: head: Default, loss=0.01034272, RMSE_E_per_atom=    1.11 meV, RMSE_F=   19.90 meV / A
+2025-09-29 18:04:46.300 INFO: Epoch 650: head: Default, loss=0.01010542, RMSE_E_per_atom=    1.00 meV, RMSE_F=   19.72 meV / A
+2025-09-29 18:06:54.520 INFO: Epoch 655: head: Default, loss=0.00998669, RMSE_E_per_atom=    0.92 meV, RMSE_F=   19.64 meV / A
+2025-09-29 18:09:02.730 INFO: Epoch 660: head: Default, loss=0.00991037, RMSE_E_per_atom=    0.88 meV, RMSE_F=   19.58 meV / A
+2025-09-29 18:11:10.736 INFO: Epoch 665: head: Default, loss=0.00984973, RMSE_E_per_atom=    0.85 meV, RMSE_F=   19.54 meV / A
+2025-09-29 18:13:18.352 INFO: Epoch 670: head: Default, loss=0.00981106, RMSE_E_per_atom=    0.82 meV, RMSE_F=   19.51 meV / A
+2025-09-29 18:15:25.866 INFO: Epoch 675: head: Default, loss=0.00976476, RMSE_E_per_atom=    0.80 meV, RMSE_F=   19.48 meV / A
+2025-09-29 18:17:33.998 INFO: Epoch 680: head: Default, loss=0.00973570, RMSE_E_per_atom=    0.78 meV, RMSE_F=   19.45 meV / A
+2025-09-29 18:19:41.811 INFO: Epoch 685: head: Default, loss=0.00969655, RMSE_E_per_atom=    0.76 meV, RMSE_F=   19.42 meV / A
+2025-09-29 18:21:49.088 INFO: Epoch 690: head: Default, loss=0.00967366, RMSE_E_per_atom=    0.75 meV, RMSE_F=   19.40 meV / A
+2025-09-29 18:23:56.827 INFO: Epoch 695: head: Default, loss=0.00965096, RMSE_E_per_atom=    0.73 meV, RMSE_F=   19.39 meV / A
+2025-09-29 18:26:04.729 INFO: Epoch 700: head: Default, loss=0.00962128, RMSE_E_per_atom=    0.72 meV, RMSE_F=   19.36 meV / A
+2025-09-29 18:28:12.431 INFO: Epoch 705: head: Default, loss=0.00960336, RMSE_E_per_atom=    0.71 meV, RMSE_F=   19.35 meV / A
+2025-09-29 18:30:19.799 INFO: Epoch 710: head: Default, loss=0.00958851, RMSE_E_per_atom=    0.70 meV, RMSE_F=   19.34 meV / A
+2025-09-29 18:32:27.606 INFO: Epoch 715: head: Default, loss=0.00958238, RMSE_E_per_atom=    0.69 meV, RMSE_F=   19.33 meV / A
+2025-09-29 18:34:36.051 INFO: Epoch 720: head: Default, loss=0.00954968, RMSE_E_per_atom=    0.69 meV, RMSE_F=   19.30 meV / A
+2025-09-29 18:36:44.028 INFO: Epoch 725: head: Default, loss=0.00954114, RMSE_E_per_atom=    0.67 meV, RMSE_F=   19.30 meV / A
+2025-09-29 18:38:52.233 INFO: Epoch 730: head: Default, loss=0.00952140, RMSE_E_per_atom=    0.67 meV, RMSE_F=   19.28 meV / A
+2025-09-29 18:41:00.145 INFO: Epoch 735: head: Default, loss=0.00949885, RMSE_E_per_atom=    0.66 meV, RMSE_F=   19.26 meV / A
+2025-09-29 18:43:07.795 INFO: Epoch 740: head: Default, loss=0.00948325, RMSE_E_per_atom=    0.65 meV, RMSE_F=   19.25 meV / A
+2025-09-29 18:45:14.981 INFO: Epoch 745: head: Default, loss=0.00947128, RMSE_E_per_atom=    0.64 meV, RMSE_F=   19.24 meV / A
+2025-09-29 18:47:23.501 INFO: Epoch 750: head: Default, loss=0.00945434, RMSE_E_per_atom=    0.63 meV, RMSE_F=   19.22 meV / A
+2025-09-29 18:49:31.576 INFO: Epoch 755: head: Default, loss=0.00944849, RMSE_E_per_atom=    0.63 meV, RMSE_F=   19.22 meV / A
+2025-09-29 18:51:39.939 INFO: Epoch 760: head: Default, loss=0.00943003, RMSE_E_per_atom=    0.63 meV, RMSE_F=   19.20 meV / A
+2025-09-29 18:53:48.014 INFO: Epoch 765: head: Default, loss=0.00941212, RMSE_E_per_atom=    0.62 meV, RMSE_F=   19.18 meV / A
+2025-09-29 18:55:55.657 INFO: Epoch 770: head: Default, loss=0.00940458, RMSE_E_per_atom=    0.61 meV, RMSE_F=   19.18 meV / A
+2025-09-29 18:58:03.508 INFO: Epoch 775: head: Default, loss=0.00938852, RMSE_E_per_atom=    0.62 meV, RMSE_F=   19.16 meV / A
+2025-09-29 19:00:11.153 INFO: Epoch 780: head: Default, loss=0.00937959, RMSE_E_per_atom=    0.61 meV, RMSE_F=   19.16 meV / A
+2025-09-29 19:02:18.728 INFO: Epoch 785: head: Default, loss=0.00937294, RMSE_E_per_atom=    0.60 meV, RMSE_F=   19.15 meV / A
+2025-09-29 19:04:26.823 INFO: Epoch 790: head: Default, loss=0.00935399, RMSE_E_per_atom=    0.60 meV, RMSE_F=   19.13 meV / A
+2025-09-29 19:06:35.139 INFO: Epoch 795: head: Default, loss=0.00934600, RMSE_E_per_atom=    0.59 meV, RMSE_F=   19.13 meV / A
+2025-09-29 19:08:15.668 INFO: Training complete
+2025-09-29 19:08:15.669 INFO: 
+2025-09-29 19:08:15.669 INFO: ===========RESULTS===========
+2025-09-29 19:08:15.672 INFO: Loading checkpoint: ./checkpoints/MACE_Cu_H2O_PZC_3_run-420_epoch-630.pt
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/mace/tools/checkpoint.py:187: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=checkpoint_info.path, map_location=device),
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/mace/tools/checkpoint.py:187: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=checkpoint_info.path, map_location=device),
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/mace/tools/checkpoint.py:187: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=checkpoint_info.path, map_location=device),
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/mace/tools/checkpoint.py:187: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=checkpoint_info.path, map_location=device),
+2025-09-29 19:08:15.722 INFO: Loaded Stage one model from epoch 630 for evaluation
+2025-09-29 19:08:15.723 INFO: Saving model to checkpoints/MACE_Cu_H2O_PZC_3_run-420.model
+2025-09-29 19:08:15.865 INFO: Compiling model, saving metadata to MACE_Cu_H2O_PZC_3_compiled.model
+2025-09-29 19:08:16.405 INFO: Computing metrics for training, validation, and test sets
+2025-09-29 19:08:16.406 INFO: Skipping evaluation for heads: ['pt_head']
+2025-09-29 19:08:16.406 INFO: Evaluating train_Default ...
+2025-09-29 19:08:50.524 INFO: Evaluating valid_Default ...
+2025-09-29 19:08:52.457 INFO: Error-table on TRAIN and VALID:
++---------------+---------------------+------------------+-------------------+
+|  config_type  | RMSE E / meV / atom | RMSE F / meV / A | relative F RMSE % |
++---------------+---------------------+------------------+-------------------+
+| train_Default |            4.8      |         17.0     |          1.74     |
+| valid_Default |            4.7      |         19.6     |          2.03     |
++---------------+---------------------+------------------+-------------------+
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+2025-09-29 19:10:03.795 INFO: Loading checkpoint: ./checkpoints/MACE_Cu_H2O_PZC_3_run-420_epoch-795_swa.pt
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/mace/tools/checkpoint.py:187: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=checkpoint_info.path, map_location=device),
+2025-09-29 19:10:03.838 INFO: Loaded Stage two model from epoch 795 for evaluation
+2025-09-29 19:10:03.838 INFO: Saving model to checkpoints/MACE_Cu_H2O_PZC_3_run-420_stagetwo.model
+2025-09-29 19:10:03.983 INFO: Compiling model, saving metadata MACE_Cu_H2O_PZC_3_stagetwo_compiled.model
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/jit/_check.py:178: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn(
+2025-09-29 19:10:04.480 INFO: Computing metrics for training, validation, and test sets
+2025-09-29 19:10:04.480 INFO: Skipping evaluation for heads: ['pt_head']
+2025-09-29 19:10:04.481 INFO: Evaluating train_Default ...
+2025-09-29 19:10:38.466 INFO: Evaluating valid_Default ...
+2025-09-29 19:10:40.332 INFO: Error-table on TRAIN and VALID:
++---------------+---------------------+------------------+-------------------+
+|  config_type  | RMSE E / meV / atom | RMSE F / meV / A | relative F RMSE % |
++---------------+---------------------+------------------+-------------------+
+| train_Default |            0.6      |         16.6     |          1.69     |
+| valid_Default |            0.6      |         19.1     |          1.98     |
++---------------+---------------------+------------------+-------------------+
+/leonardo/pub/userexternal/mbianchi/mace_v0.3.13/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+2025-09-29 19:11:50.919 INFO: Done

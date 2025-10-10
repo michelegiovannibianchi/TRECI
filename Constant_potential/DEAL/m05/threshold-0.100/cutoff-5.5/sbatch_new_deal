@@ -1,0 +1,35 @@
+#!/bin/bash
+#SBATCH --account=IscrB_ProAmmo
+#SBATCH --partition=boost_usr_prod  # partition to be used
+##SBATCH --qos=boost_qos_dbg
+#SBATCH --time 10:30:00             # format: HH:MM:SS
+#SBATCH --nodes=1                   # node
+#SBATCH --ntasks-per-node=1         # tasks out of 32
+#SBATCH --cpus-per-task=32
+#SBATCH --export=NONE 		        # Avoid propagation of variables from the notebook submission environment
+#SBATCH --job-name='DEAL_V_m05'
+############################
+
+#source env
+module load intel-oneapi-tbb
+module load intel-oneapi-compilers
+module load intel-oneapi-mpi
+module load openblas/0.3.21--gcc--11.3.0
+module load intel-oneapi-mkl
+
+mamba init
+source ~/.bashrc
+
+# Check the correct conda env with FLARE installed
+ENV_PATH="/leonardo/pub/userexternal/sperego0/envs/flare_v1.3.3-mkl"
+mamba activate "$ENV_PATH"
+
+
+# Set the folder where there is the DEAL installation
+DEAL=/leonardo_work/IscrB_HERMAN/michele_b/Deal/new_DEAL/DEAL/deal/deal.py
+
+#running
+python $DEAL input.yaml    
+
+echo %DATE% %TIME%
+echo Job Terminated

@@ -1,0 +1,770 @@
+[
+    {
+        "checkpoint": {
+            "hash": "aac870cc816a8a11e9ab336e04b5f859",
+            "rf_weight_id": 0
+        },
+        "timings": {
+            "cov_coeffs": 394.3515575330239,
+            "solve": 0.01350818807259202
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 49.338493380022754,
+                "forces_MAE": 32.689097628068694,
+                "energy_RMSE": 104.92981636076267,
+                "forces_RMSE": 45.58337523772548,
+                "forces_cosim": 0.9913980841066279
+            },
+            "validation": {
+                "energy_MAE": 62.01199948064488,
+                "forces_MAE": 31.609113428327774,
+                "energy_RMSE": 134.9426730279414,
+                "forces_RMSE": 43.334412645921866,
+                "forces_cosim": 0.9922937767373191
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 4.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.5,
+                "l2_penalty": 9.999999999999999e-11,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "aac870cc816a8a11e9ab336e04b5f859",
+            "rf_weight_id": 1
+        },
+        "timings": {
+            "cov_coeffs": 394.3686342180008,
+            "solve": 0.012905584997497499
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 49.43912165328558,
+                "forces_MAE": 32.55588849081377,
+                "energy_RMSE": 105.09949616362398,
+                "forces_RMSE": 45.38919678481015,
+                "forces_cosim": 0.9914417001619293
+            },
+            "validation": {
+                "energy_MAE": 62.13202495175252,
+                "forces_MAE": 31.44486337237888,
+                "energy_RMSE": 135.15778479998062,
+                "forces_RMSE": 43.09734661131007,
+                "forces_cosim": 0.9923458612627454
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 4.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.5,
+                "l2_penalty": 1e-07,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "aac870cc816a8a11e9ab336e04b5f859",
+            "rf_weight_id": 2
+        },
+        "timings": {
+            "cov_coeffs": 394.35550889000297,
+            "solve": 0.014312746934592724
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 53.71163912639306,
+                "forces_MAE": 29.118680415541363,
+                "energy_RMSE": 111.60839759848284,
+                "forces_RMSE": 40.87995883282929,
+                "forces_cosim": 0.9924748334588046
+            },
+            "validation": {
+                "energy_MAE": 66.84206006064427,
+                "forces_MAE": 27.95429457558526,
+                "energy_RMSE": 143.23601964867288,
+                "forces_RMSE": 38.280978302886204,
+                "forces_cosim": 0.9935057345363829
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 4.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.9,
+                "l2_penalty": 9.999999999999999e-11,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "aac870cc816a8a11e9ab336e04b5f859",
+            "rf_weight_id": 3
+        },
+        "timings": {
+            "cov_coeffs": 394.3662821149919,
+            "solve": 0.014024080941453576
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 53.717845338479464,
+                "forces_MAE": 29.12067340321518,
+                "energy_RMSE": 111.62451325402905,
+                "forces_RMSE": 40.87947127779775,
+                "forces_cosim": 0.9924759314391032
+            },
+            "validation": {
+                "energy_MAE": 66.85113995513044,
+                "forces_MAE": 27.947470294104683,
+                "energy_RMSE": 143.25740198686162,
+                "forces_RMSE": 38.264762391260426,
+                "forces_cosim": 0.9935088389449649
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 4.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.9,
+                "l2_penalty": 1e-07,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "6540f1dafd2f5137ce08020a4aac1df1",
+            "rf_weight_id": 0
+        },
+        "timings": {
+            "cov_coeffs": 392.1652053470025,
+            "solve": 0.0017317490419372916
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 51.45233622242249,
+                "forces_MAE": 29.216607928846443,
+                "energy_RMSE": 107.92246263236751,
+                "forces_RMSE": 40.93730111536372,
+                "forces_cosim": 0.9924232546222267
+            },
+            "validation": {
+                "energy_MAE": 64.35350352340383,
+                "forces_MAE": 27.98034742143419,
+                "energy_RMSE": 138.6325220065289,
+                "forces_RMSE": 38.319562811382035,
+                "forces_cosim": 0.9934069431490369
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 6.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.5,
+                "l2_penalty": 9.999999999999999e-11,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "6540f1dafd2f5137ce08020a4aac1df1",
+            "rf_weight_id": 1
+        },
+        "timings": {
+            "cov_coeffs": 392.1675579359289,
+            "solve": 0.0017288450617343187
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 51.58594366557717,
+                "forces_MAE": 29.151371458500765,
+                "energy_RMSE": 108.15798212445975,
+                "forces_RMSE": 40.840744726113805,
+                "forces_cosim": 0.9924483835411985
+            },
+            "validation": {
+                "energy_MAE": 64.51664751288882,
+                "forces_MAE": 27.883636527591282,
+                "energy_RMSE": 138.9313648422138,
+                "forces_RMSE": 38.16509354725552,
+                "forces_cosim": 0.9934477094146941
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 6.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.5,
+                "l2_penalty": 1e-07,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "6540f1dafd2f5137ce08020a4aac1df1",
+            "rf_weight_id": 2
+        },
+        "timings": {
+            "cov_coeffs": 392.1642210240243,
+            "solve": 0.0017422829987481236
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 54.04915838310373,
+                "forces_MAE": 28.132260975084808,
+                "energy_RMSE": 111.87954858508118,
+                "forces_RMSE": 39.56844835429746,
+                "forces_cosim": 0.992710373618386
+            },
+            "validation": {
+                "energy_MAE": 67.19235047144585,
+                "forces_MAE": 26.85483513938056,
+                "energy_RMSE": 143.54332002914344,
+                "forces_RMSE": 36.806926521686215,
+                "forces_cosim": 0.9937977823946211
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 6.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.9,
+                "l2_penalty": 9.999999999999999e-11,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "6540f1dafd2f5137ce08020a4aac1df1",
+            "rf_weight_id": 3
+        },
+        "timings": {
+            "cov_coeffs": 392.1685241119703,
+            "solve": 0.0017332829302176833
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 54.049890207953055,
+                "forces_MAE": 28.14598739660528,
+                "energy_RMSE": 111.89702912748893,
+                "forces_RMSE": 39.582217669170014,
+                "forces_cosim": 0.9927130321566568
+            },
+            "validation": {
+                "energy_MAE": 67.19908611343797,
+                "forces_MAE": 26.852892716725666,
+                "energy_RMSE": 143.56856468309726,
+                "forces_RMSE": 36.79149402060922,
+                "forces_cosim": 0.9938045806354947
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 6.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.9,
+                "l2_penalty": 1e-07,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "fbf4e2fc3cac011e9c0687872e3a48fa",
+            "rf_weight_id": 0
+        },
+        "timings": {
+            "cov_coeffs": 392.4999470509356,
+            "solve": 0.0017300959443673491
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 52.49714947709436,
+                "forces_MAE": 28.202073001405267,
+                "energy_RMSE": 109.42537058870201,
+                "forces_RMSE": 39.63093009593114,
+                "forces_cosim": 0.9927042403289575
+            },
+            "validation": {
+                "energy_MAE": 65.49311958363782,
+                "forces_MAE": 26.874282783932156,
+                "energy_RMSE": 140.48416121030053,
+                "forces_RMSE": 36.86018993746763,
+                "forces_cosim": 0.9937462326553133
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 8.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.5,
+                "l2_penalty": 9.999999999999999e-11,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "fbf4e2fc3cac011e9c0687872e3a48fa",
+            "rf_weight_id": 1
+        },
+        "timings": {
+            "cov_coeffs": 392.5048325009411,
+            "solve": 0.0017190210055559874
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 52.63633764145232,
+                "forces_MAE": 28.224600422325317,
+                "energy_RMSE": 109.67525332489278,
+                "forces_RMSE": 39.661626982932745,
+                "forces_cosim": 0.9927064137595693
+            },
+            "validation": {
+                "energy_MAE": 65.66319264264558,
+                "forces_MAE": 26.88162178463406,
+                "energy_RMSE": 140.80295269667715,
+                "forces_RMSE": 36.834502169048655,
+                "forces_cosim": 0.9937670926253
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 8.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.5,
+                "l2_penalty": 1e-07,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "fbf4e2fc3cac011e9c0687872e3a48fa",
+            "rf_weight_id": 2
+        },
+        "timings": {
+            "cov_coeffs": 392.5039401350077,
+            "solve": 0.001733721001073718
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 54.17673777466523,
+                "forces_MAE": 27.77836783194656,
+                "energy_RMSE": 111.98684274580637,
+                "forces_RMSE": 39.11451959267665,
+                "forces_cosim": 0.9928049587747126
+            },
+            "validation": {
+                "energy_MAE": 67.32630878123788,
+                "forces_MAE": 26.440597428215874,
+                "energy_RMSE": 143.6679367738235,
+                "forces_RMSE": 36.27115486358399,
+                "forces_cosim": 0.9939104070266088
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 8.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.9,
+                "l2_penalty": 9.999999999999999e-11,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "fbf4e2fc3cac011e9c0687872e3a48fa",
+            "rf_weight_id": 3
+        },
+        "timings": {
+            "cov_coeffs": 392.50295094703324,
+            "solve": 0.0017217020504176617
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 54.16472107016949,
+                "forces_MAE": 27.816253698613654,
+                "energy_RMSE": 111.99636477246132,
+                "forces_RMSE": 39.16277951411586,
+                "forces_cosim": 0.9928035784566231
+            },
+            "validation": {
+                "energy_MAE": 67.32241554368969,
+                "forces_MAE": 26.46431785159641,
+                "energy_RMSE": 143.68602051247564,
+                "forces_RMSE": 36.28621464967036,
+                "forces_cosim": 0.9939161638418833
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 8.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.9,
+                "l2_penalty": 1e-07,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "15a26ed393e9e7799adee50c015d3b99",
+            "rf_weight_id": 0
+        },
+        "timings": {
+            "cov_coeffs": 392.43291125807445,
+            "solve": 0.0017431569285690784
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 53.084762629681826,
+                "forces_MAE": 27.80980838428844,
+                "energy_RMSE": 110.26048006893843,
+                "forces_RMSE": 39.13715577968317,
+                "forces_cosim": 0.9928150944162214
+            },
+            "validation": {
+                "energy_MAE": 66.11430281150875,
+                "forces_MAE": 26.436816692352295,
+                "energy_RMSE": 141.5141001255939,
+                "forces_RMSE": 36.286177398280444,
+                "forces_cosim": 0.9938922723134359
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 10.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.5,
+                "l2_penalty": 9.999999999999999e-11,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "15a26ed393e9e7799adee50c015d3b99",
+            "rf_weight_id": 1
+        },
+        "timings": {
+            "cov_coeffs": 392.4338957039872,
+            "solve": 0.0017237269785255194
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 53.21829946200365,
+                "forces_MAE": 27.92834624149012,
+                "energy_RMSE": 110.50138590669933,
+                "forces_RMSE": 39.30454246920845,
+                "forces_cosim": 0.9927896144287438
+            },
+            "validation": {
+                "energy_MAE": 66.27647627583049,
+                "forces_MAE": 26.552672651078964,
+                "energy_RMSE": 141.82283728562564,
+                "forces_RMSE": 36.40464074646626,
+                "forces_cosim": 0.9938874658611085
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 10.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.5,
+                "l2_penalty": 1e-07,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "15a26ed393e9e7799adee50c015d3b99",
+            "rf_weight_id": 2
+        },
+        "timings": {
+            "cov_coeffs": 392.4372673690086,
+            "solve": 0.0017342179780825973
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 54.23193232846328,
+                "forces_MAE": 27.611864263361152,
+                "energy_RMSE": 112.03499619507933,
+                "forces_RMSE": 38.904409737969964,
+                "forces_cosim": 0.9928566454129927
+            },
+            "validation": {
+                "energy_MAE": 67.38512052724157,
+                "forces_MAE": 26.241465886433918,
+                "energy_RMSE": 143.7250168679522,
+                "forces_RMSE": 36.0111619768621,
+                "forces_cosim": 0.9939727700418897
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 10.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.9,
+                "l2_penalty": 9.999999999999999e-11,
+                "dtype": "torch.float64"
+            }
+        }
+    },
+    {
+        "checkpoint": {
+            "hash": "15a26ed393e9e7799adee50c015d3b99",
+            "rf_weight_id": 3
+        },
+        "timings": {
+            "cov_coeffs": 392.4371521460125,
+            "solve": 0.001744400942698121
+        },
+        "metrics": {
+            "train": {
+                "energy_MAE": 54.20926112076748,
+                "forces_MAE": 27.687464855504377,
+                "energy_RMSE": 112.03725376186065,
+                "forces_RMSE": 39.009146931349306,
+                "forces_cosim": 0.9928445565073114
+            },
+            "validation": {
+                "energy_MAE": 67.37116799927759,
+                "forces_MAE": 26.311192141638863,
+                "energy_RMSE": 143.73627711642976,
+                "forces_RMSE": 36.08615595035616,
+                "forces_cosim": 0.9939708345466189
+            }
+        },
+        "hyperparameters": {
+            "franken": {
+                "path_or_id": "MACE-L0",
+                "interaction_block": 2,
+                "family": "mace"
+            },
+            "random_features": {
+                "rf_type": "gaussian",
+                "num_random_features": 1024,
+                "length_scale": 10.0,
+                "use_offset": true,
+                "rng_seed": 42
+            },
+            "input_scaler": {
+                "scale_by_Z": true
+            },
+            "solver": {
+                "force_weight": 0.9,
+                "l2_penalty": 1e-07,
+                "dtype": "torch.float64"
+            }
+        }
+    }
+]
