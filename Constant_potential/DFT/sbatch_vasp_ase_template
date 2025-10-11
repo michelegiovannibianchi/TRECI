@@ -38,7 +38,7 @@ Bader_util_path="/leonardo/home/userexternal/mbianchi/Bader/vtstscripts-1033"
 
 # Path for the python script implementing the Double Reference Method workflow
 # Customize your VASP setting inside it
-DoubleReference_script="DoubleRefernceWorkflow_Const_Pot.py"
+DoubleReference_script="DoubleReferenceWorkflow_Const_Pot.py"
 
 # Path for the POSCAR
 Poscar_path=POSCAR_PATH
