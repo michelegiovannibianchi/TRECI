@@ -17,7 +17,7 @@ module load intel-oneapi-mpi
 module load openblas/0.3.21--gcc--11.3.0
 module load intel-oneapi-mkl
 
-mamba init
+# mamba init
 source ~/.bashrc
 
 # Check the correct conda env with FLARE installed
