@@ -8,14 +8,14 @@ from ase import Atoms
 
 def generate_dataset_partition(fraction_4_model, fraction_val):
     """
-    This script creates 4 different training/validation partitions of the dataset
-    Each partition will be used to train a different ML-FF
-    Each model will be validated on a fraction the selected partition
-    The training and validation sets are saved in the folders "MLFF1", "MLFF2", "MLFF3", "MLFF4"
+    This script creates 4 different training/validation partitions of the dataset.
+    Each partition will be used to train a different ML-FF.
+    Each model will be validated on a fraction the selected partition.
+    The training and validation sets are saved in the folders "MLFF1", "MLFF2" etc...
     
     Inputs:
     - fraction_4_model: float, fraction of the dataset that is used for a specific ML-FF
-    - fraction_val: float, fraction of the dataset of a specific ML-FF that is used for validation
+    - fraction_val: float, fraction of the dataset for a specific ML-FF that is used for validation
     """
     # Create 4 different training/validation partitions of the dataset
     # Each partition will be used to train a different ML-FF
@@ -194,8 +194,8 @@ def generate_dataset_partition(fraction_4_model, fraction_val):
 
 def create_mace_train_scripts(num_models, template_script, output_prefix):
     """
-    This script creates the sbatch script for the training of the ML potential with MACE
-    The sbatch script is saved in the folder "MLFF1", "MLFF2", "MLFF3", "MLFF4"
+    This script creates the sbatch scripts for the training of the ML potential with MACE.
+    The sbatch scripts are saved in the folder "MLFF1", "MLFF2" etc...
 
     Inputs:
     - num_models: int, number of ML models to be trained (default: 4)
@@ -211,10 +211,10 @@ def create_mace_train_scripts(num_models, template_script, output_prefix):
     if output_prefix is None:
         output_prefix='sbatch_train_mace_model_' 
         
-    print("Creating the sbatch scripts for the training of the ML potentials\n")   
+    print("Creating the sbatch scripts for the training of the ML potentials:\n")   
     for i in range(1, num_models+1):
         seed = 240 + 60*i
-        print(f"Model: {i}, with Seed: {seed}")
+        print(f"Model {i} with seed {seed}")
 
         # Read the template
         with open(template_script, 'r') as f:
@@ -234,21 +234,22 @@ def create_mace_train_scripts(num_models, template_script, output_prefix):
             f.write(content)
     return
 
-def compute_solvent_density_profile(MD_file,format,sigma,z_surf):
+def compute_solvent_density_profile(MD_file,format,sigma,z_surf,n_bin):
     """
-    This script computes the density profile of the system along the z direction via "Kernel Density Estimation" (KDE)
-    The density profile is computed for each atomic species present in the system and with respect to the surface of the metal
-    The density profile is computed from the MD trajectory saved in the file "MD_file" with ase format "format"
+    This script computes the density profile of the water solvent along the z direction via Kernel Density Estimation (KDE).
+    The density profile is computed for each atomic species present in the system and with respect to the surface of the metal.
+    
     Inputs:
-        - MD_file is the file containing the MD trajectory    
-        - format is the ase format of the MD trajectory 
-        - sigma is the standard deviation of the Gaussian kernel used for the KDE
-        - z_surf is the position of the surface of the metal with respect to the center of the slab (in Angstrom)
-        
+        - MD_file: string, file containing the MD trajectory    
+        - format: str, ase format of the MD trajectory 
+        - sigma: float, the standard deviation of the Gaussian kernel used for the KDE
+        - z_surf: float, z position of the metal surface with respect to the center of the slab (in Angstrom)   
+        - n_bin: int, number of grid points
+ 
     Outputs:
-        - bin_center is the center of each bin of the density profile   
-        - density_O_g_cm3 is the density profile of oxygen in g/cm^3
-        - density_H_g_cm3 is the density profile of hydrogen in g/cm^3
+        - bin_center: array, centers of each bin of the density profile   
+        - density_O_g_cm3: array, density profile of oxygen in g/cm^3
+        - density_H_g_cm3: array, density profile of hydrogen in g/cm^3
         """     
     
     if MD_file is None:
@@ -259,14 +260,15 @@ def compute_solvent_density_profile(MD_file,format,sigma,z_surf):
         sigma=0.06
     if z_surf is None:
         raise Exception("z_surf not provided, density profile will be computed with respet to the center of the slab")
+    if n_bin is None:
+        n_bin=200
 
     #Read MD
     MD=read(MD_file, index=':',format=format)
 
     n_atoms=len(MD[-1])
     n_frame=len(MD)
-    n_bin=200
-
+    
     box=MD[1].get_cell()
     a_cell=box[0,0]
     b_cell=box[1,1]
@@ -358,19 +360,19 @@ def kde_histogram(x,limits,nbins,sigma=None):
 
 def create_DFT_scripts(num_configurations, case, template_script, path_poscar, python_calc_file, customize_potential,V_case=None,extra_elec=None,C_guess=None):
     """
-    This script creates the sbatch scripts for the DFT single-points
-    The sbatch scripts are saved in the folders "case_0', 'case_1' etc...
+    This script creates the sbatch scripts for the DFT single-points.
+    The sbatch scripts are saved in folders "case_0', 'case_1' etc...
 
     Inputs:
-    - num_configurations: number of configurations to label
-    - case: string identify the case (e.g., "PZC", "m05" ...)
-    - template_script: name of the template script (default: sbatch_vasp_ase_template)
-    - path_poscar: path to the POSCAR files to be used for the DFT single-points
-    - python_calc_file: path to the python file containing the VASP calculator
+    - num_configurations: int, number of configurations to label
+    - case: string, it identifies the case (e.g., "PZC", "m05" etc...)
+    - template_script: string, name of the template script (default: sbatch_vasp_ase_template)
+    - path_poscar: string, path to the POSCAR files for the DFT single-points
+    - python_calc_file: string, path to the python file containing the VASP calculator
     - customize_potential: bool, logical switch to specify extra parameters for constant-potential calculation (default: False)
-    - V_case: list of target potential value that will be computed for the same geometry via double reference method (required only if customize_potential=True)
+    - V_case: array, of target potential values that will be computed for the same geometry via double reference method (required only if customize_potential=True)
     - extra_elec: float, initial guess for the extra electron charge [e] to add to the system (required only if customize_potential=True)
-    - C_guess:    float, initial guess for the capacitance  [e/(V A^2)] (required only if customize_potential=True)
+    - C_guess:    float, initial guess for the capacitance [e/(V A^2)] (required only if customize_potential=True) 
     """
     if num_configurations is None:
         raise ValueError("num_configurations not provided")    
