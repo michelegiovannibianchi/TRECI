@@ -364,15 +364,15 @@ def create_DFT_scripts(num_configurations, case, template_script, path_poscar, p
     The sbatch scripts are saved in folders "case_0', 'case_1' etc...
 
     Inputs:
-    - num_configurations: int, number of configurations to label
-    - case: string, it identifies the case (e.g., "PZC", "m05" etc...)
-    - template_script: string, name of the template script (default: sbatch_vasp_ase_template)
-    - path_poscar: string, path to the POSCAR files for the DFT single-points
-    - python_calc_file: string, path to the python file containing the VASP calculator
-    - customize_potential: bool, logical switch to specify extra parameters for constant-potential calculation (default: False)
-    - V_case: array, of target potential values that will be computed for the same geometry via double reference method (required only if customize_potential=True)
-    - extra_elec: float, initial guess for the extra electron charge [e] to add to the system (required only if customize_potential=True)
-    - C_guess:    float, initial guess for the capacitance [e/(V A^2)] (required only if customize_potential=True) 
+        - num_configurations: int, number of configurations to label
+        - case: string, it identifies the case (e.g., "PZC", "m05" etc...)
+        - template_script: string, name of the template script (default: sbatch_vasp_ase_template)
+        - path_poscar: string, path to the POSCAR files for the DFT single-points
+        - python_calc_file: string, path to the python file containing the VASP calculator
+        - customize_potential: bool, logical switch to specify extra parameters for constant-potential calculation (default: False)
+        - V_case: array, of target potential values that will be computed for the same geometry via double reference method (required only if customize_potential=True)
+        - extra_elec: float, initial guess for the extra electron charge [e] to add to the system (required only if customize_potential=True)
+        - C_guess:    float, initial guess for the capacitance [e/(V A^2)] (required only if customize_potential=True) 
     """
     if num_configurations is None:
         raise ValueError("num_configurations not provided")    
@@ -437,18 +437,18 @@ def create_DFT_scripts(num_configurations, case, template_script, path_poscar, p
     return
 
 def create_Franken_train_scripts(V_cases,N_RF, backbone_path, template_sbatch_script, template_python_API):
-    """
-    This script creates the sbatch script for the training via Franken transfer learning
-    Its also create the python script to run the training via the Franken API
+    """   
+    This script creates the sbatch script for the training via Franken transfer learning.
+    It also creates the python script to run the training via the Franken API
 
     Inputs:
-    - V_cases: list of target potentials to be trained, e.g. V_cases=[m05,m075,m1]
-    - N_RF: vector of Random Features to be used for the training
-    - backbone_path: path to the backbone model to be used for the transfer learning (default: MACE-L0)
-    - template_sbatch_script: name of the template sbatch script (default: sbatch_Franken_multiple_pot_train_template)
-    - template_python_API: name of the template python script for the training via the Franken API (default: run_train_Franken_API_template.py)
-
+    	- V_cases: array, target potentials to be trained, e.g. V_cases=[“m05”,”m075”,”m1”]
+    	- N_RF: array, number of Random Features to be used for the training
+    	- backbone_path: str, path to the backbone model to be used for the transfer learning (default: MACE-L0)
+    	- template_sbatch_script: str, name of the template sbatch script (default: sbatch_Franken_multiple_pot_train_template)
+ 	    - template_python_API: str, name of the template python script for the training via the Franken API (default: run_train_Franken_API_template.py)
     """
+    
     if V_cases is None:
         raise ValueError("V_cases not provided")  
     
@@ -502,13 +502,12 @@ def create_Franken_train_scripts(V_cases,N_RF, backbone_path, template_sbatch_sc
 
 def prepare_multiple_potential_dataset(V_vector,fraction_val):
     """
-    This script creates the ext-xyz files for the training and validation set of Franken multiple potential
-    The files are are created in the "Training" folder
+    This script creates the ext-xyz files for the training and validation set of Franken multiple potential.
+    The files are created in the "Training" folder.
 
     Inputs:
-    - V_vector: list of target potentials to be trained, e.g. [-0.5,-0.75,-1.0]
-    - fraction_val: float, fraction of the dataset used for validation (default: 0.15)
-
+        - V_vector: array, value of target potential to be trained, e.g. [-0.5,-0.75,-1.0]
+        - fraction_val: float, fraction of the dataset used for validation (default: 0.15)
     """
     if V_vector is None:
         raise ValueError("Target potentials not provided")
@@ -551,15 +550,15 @@ def prepare_multiple_potential_dataset(V_vector,fraction_val):
 
 def create_lammps_files(case, potential_file, initial_geometry_file, sbatch_template, input_template):
     """
-    This script creates the sbatch script and the LAMMPS input script to run a MD simulation with LAMMPS
-    The scripts are saved in the folder {case}
+    This script creates the sbatch script and the LAMMPS input script to run a MD simulation with LAMMPS.
+    The scripts are saved in the folder {case}.
     
     Inputs:
-    - case: label of the case (e.g. "PZC", "m05", "m075" ...)
-    - potential_file: path to the potential file of the ML-FF
-    - initial_geometry_file: path to the initial geometry file in LAMMPS format
-    - sbatch_template: name of the template sbatch script (default: sbatch_lammps_mace_template)
-    - input_template: name of the template LAMMPS input script (default: MACE_Cu_111_H2O_VCASE_lammps.in)
+    	- case: str, label of the case (e.g. "PZC", "m05", "m075" ...)
+    	- potential_file: str, path to the potential file of the ML-FF
+    	- initial_geometry_file: str, path to the initial geometry file in LAMMPS format
+    	- sbatch_template: str, name of the template sbatch script (default: sbatch_lammps_mace_template)
+        - input_template: str, name of the template LAMMPS input script (default: MACE_Cu_111_H2O_VCASE_lammps.in)
     """
     if case is None:
         raise ValueError("case not provided")    
@@ -646,16 +645,17 @@ def convert_V_to_label(V_vector):
     return V_vector_labels
     
 def extract_data_from_multiple_potential_dataset(case,V_to_do,round,folder_input,folder_output):
-    """ Function extracting the data from the different folders (case_xx) generated by the DFT, 
-        separating the info of the different target potentials 
-        and moving xyz files in the "Training/Dataset/" folders for the next round of active learning
+    """ 
+        Function extracting the data from the different folders (case_xx) generated by the DFT, 
+        separating the info of the different target potentials and moving xyz files in the dataset
+        folders for the next round of active learning
 
         Inputs:
             - case: str, label identify the potential value folder of the DFT calculations
-            - V_to_do: list, values of the target potential for which one wants to extract the data
+            - V_to_do: array, values of the target potential for which one wants to extract the data
             - round: int, number identifying the current round of active learning
-            - folder_input: path of the folder where there are the subfolders for the different configurations
-            - folder_output: path of the folder where the xyz will be saved
+            - folder_input: str, path of the folder where there are the DFT results
+            - folder_output: str, path of the folder where the xyz will be saved
      """
 
     if case is None:
