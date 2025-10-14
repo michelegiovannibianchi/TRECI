@@ -1,6 +1,6 @@
 # Workflow to develop an ML force-field for metal/water interface at PZC
 
-*Workflow_PZC.ipynb* describes in detail each step of the workflow:
+*Workflow_PZC.ipynb* describes in detail each step of the workflow.
 
 Sequence of STEPS:
 - STEP 1: Training
