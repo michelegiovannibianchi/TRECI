@@ -1,4 +1,4 @@
-# Workflow to develop ML force-fields for metal/water interface at constant target potentials
+# Workflow to develop ML force-fields for metal/water interfaces at constant target potentials
 
 The whole workflow is split in four python notebooks, each one associated with a specific step.
 
@@ -17,7 +17,7 @@ Each folder collects the input/output files of a specific step.
 
 <img src="CP_workflow_general.png" alt="CP" width="70%">
   
-These steps should be repeated until the generated ML potential is sufficiently reliable, i.e.:
-- it allows for stable MD simulations
-- it is accurate
-- it grants converged physical properties (e.g., solvent density profile) 
+These steps should be repeated until the generated ML potentials are sufficiently reliable, i.e.:
+- they allow for stable MD simulations
+- they are accurate
+- they grant converged physical properties (e.g., solvent density profile) 
