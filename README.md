@@ -44,7 +44,7 @@ The following software and versions have been used:
 - DoubleReferenceMethod suite (from [michelegiovannibianchi/FCP-calculator-DoubleReferenceMethod](https://github.com/michelegiovannibianchi/FCP-calculator-DoubleReferenceMethod))
 
 > [!NOTE]  
-> The possibility to afford a rigorous "constant potential" approach, like the *Double Reference Method*, is one of the peculiarities of the proposed strategy. However, other "constant potential" schemes can be readily applied to the workflow.
+> The possibility to afford a rigorous constant potential approach, like the *Double Reference Method*, is one of the peculiarities of the proposed strategy. However, other constant potential schemes can be readily applied to the workflow.
 
 Optional:
 - Fessa colormap (from [luigibonati/fessa-color-palette](https://github.com/luigibonati/fessa-color-palette) or from [michelegiovannibianchi/fessa-color-palette](https://github.com/michelegiovannibianchi/fessa-color-palette) for compatibility with Matplotlib>=v3.7.0) 
