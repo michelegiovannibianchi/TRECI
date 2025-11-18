@@ -1,6 +1,6 @@
 from ase.io import read,write
 from ase.calculators.vasp import Vasp
-from ase.calculators.DoubleReferenceMethod.DoubleReferenceWorkflow_calc import DoubleReferenceWorkflow
+from ase.calculators.DoubleReferenceMethod.DoubleReferenceWorkflow_calc import DoubleReferenceEvaluator,DoubleReferenceWorkflow
 import numpy as np
 
 #################   Definition of the different ASE-VASP Calculators to compute the "Double Reference Method"   #################
@@ -119,10 +119,10 @@ snap=read('POSCAR',format='vasp')
 #            calculator for system without a vacuum region and no extra charge
 #
 #        - calc_neutral_vacuum_no_dipole: ase calculator, 
-#            calculator for system with a vaccum region, but not dipole corrections
+#            calculator for system with a vaccuum region, but not dipole corrections
 #
 #        - calc_neutral_vacuum_dipole: ase calculator, 
-#            calculator for system with a vaccum region, and with dipole corrections
+#            calculator for system with a vaccuum region, and with dipole corrections
 #
 #        - calc_charge: ase calculator, 
 #            calculator for system without a vacuum region and extra charge
@@ -133,11 +133,11 @@ snap=read('POSCAR',format='vasp')
 #
 #        - C_guess: float, 
 #            initial guess for the capacitance of the interface
-#            default: 1/80 e/(V A^2) (same defalt value of the FCP2rm calculator)
+#            default: 1/80 e/(V A^2) (same default value of the FCP2rm calculator)
 #
 #        - restart: bool, 
-#            if True the calculation will start from the calculation of the system with a vaccum region, and with dipole corrections
-#            (suppose that the calculations of the neutral system without a vacuum region and system with a vaccum region, but not dipole corrections have been already performed and the charge densities are available)
+#            if True the calculation will start from the calculation of the system with a vacuum region, and with dipole corrections
+#            (suppose that the calculations of the neutral system without a vacuum region and system with a vacuum region, but not dipole corrections have been already performed and the charge densities are available)
 #            default: False
 #
 #        - V_SHE: float, 
@@ -145,8 +145,8 @@ snap=read('POSCAR',format='vasp')
 #            default: 4.44 V
 #        """
 
-DoubleReferenceWorkflow(
-                        snap=snap,
+# Prepare arguments for your workflow
+workflow_args = dict(
                         external_bias_vector=V_VECTOR,
                         calc_neutral_no_vacuum=calc_neutral_no_vacuum,
                         calc_neutral_vacuum_no_dipole=calc_neutral_vacuum_no_dipole,
@@ -156,4 +156,11 @@ DoubleReferenceWorkflow(
                         C_guess=C_START,
                         restart=False
                         )
+
+# Attach evaluator
+snap.evaluator = DoubleReferenceEvaluator(DoubleReferenceWorkflow, **workflow_args)
+
+# Trigger calculation
+result = snap.evaluator.evaluate(snap)
+
 print("Calculation terminated")
