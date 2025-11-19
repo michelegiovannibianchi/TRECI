@@ -1,7 +1,7 @@
-# DoubleReference-MLFF
+# TRECI: TRansfer learning for ElectroChemical Interfaces
 
 ## Introduction
-We present a general workflow that, starting from a high-quality DFT description of the metal/water interface, allows to generate data-efficient Machine Learning (ML) potentials in an electronically grand-canonical ensemble.
+We present TRECI (TRansfer learning for ElectroChemical Interfaces), a general workflow that, starting from a high-quality DFT description of the metal/water interface, allows to generate data-efficient Machine Learning (ML) potentials in an electronically grand-canonical ensemble.
 
 The approach relies on three pillars:
   - a high-quality multiple-potential dataset describing the metal/water interface via explicit solvent and in an electronically grand-canonical scheme (see [*Double Reference Method*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.73.165402))
@@ -41,7 +41,7 @@ The following software and versions have been used:
 - DEAL (from [luigibonati/DEAL/new_DEAL](https://github.com/luigibonati/DEAL/tree/new_deal?tab=readme-ov-file))
 - FLARE (v1.3.3-fix from [luigibonati/flare](https://github.com/luigibonati/flare) → modified FLARE version with small fixes)
 - a DFT engine (e.g., VASP [package](https://www.vasp.at/))
-- DoubleReferenceMethod suite (from [michelegiovannibianchi/FCP-calculator-DoubleReferenceMethod](https://github.com/michelegiovannibianchi/FCP-calculator-DoubleReferenceMethod))
+- the DoubleReferenceMethod-FCP-calculator (from [michelegiovannibianchi/DoubleReferenceMethod-FCP-calculator](https://github.com/michelegiovannibianchi/DoubleReferenceMethod-FCP-calculator))
 
 > [!NOTE]  
 > The possibility to afford a rigorous constant potential approach, like the *Double Reference Method*, is one of the peculiarities of the proposed strategy. However, other constant potential schemes can be readily applied to the workflow.
