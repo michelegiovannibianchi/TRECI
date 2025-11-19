@@ -13,19 +13,19 @@ The approach relies on three pillars:
 For detailed information and an example of application to the Cu/water interface please check our paper xxxxxxxxxxxxxxx
 
 ## Contents
-Two workflows to generate ML potentials for metal/water interfaces are reported in this repository:
+Two workflows to generate MLIPS for metal/water interfaces are reported in this repository:
 - workflow for the *potential of zero charge* (PZC) in the "PZC" folder
 - workflow for *constant potentials* in the "Constant_potential" folder
 
 Each workflow is discussed in python notebooks to illustrate each step of the process.
 
 ```text
-├── PZC                   # Workflow to develop a ML force-field for metal/water interface at PZC 
+├── PZC                   # Workflow to develop a MLIP for metal/water interface at PZC 
 │   ├── Train
 │   ├── MD
 │   ├── DEAL
 │   └── DFT
-├── Constant_potential    # Workflow to develop ML force-fields for metal/water interfaces at constant potential 
+├── Constant_potential    # Workflow to develop MLIP for metal/water interfaces at constant potential 
 │   ├── Train
 │   ├── MD
 |   ├── DEAL
