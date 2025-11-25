@@ -10,7 +10,7 @@ The approach relies on three pillars:
 
 <img src="general_scheme.png" alt="General scheme" width="90%">
 
-For detailed information and an example of application to the Cu/water interface please check our paper xxxxxxxxxxxxxxx
+For detailed information and an example of application to the Cu/water interface please check our paper [*Electrochemical Interfaces at Constant Potential: Data-Efficient Transfer Learning for Machine-Learning-Based Molecular Dynamics*](https://arxiv.org/abs/2511.19338).
 
 ## Contents
 Two workflows to generate MLIPS for metal/water interfaces are reported in this repository:
@@ -51,4 +51,14 @@ Optional:
 
 ## Citing
 If you find these workflows useful, please cite our work using the following bibtex entry:
-xxxxxxxxx
+```
+@misc{bianchi2025electrochemicalinterfacesconstantpotential,
+      title={Electrochemical Interfaces at Constant Potential: Data-Efficient Transfer Learning for Machine-Learning-Based Molecular Dynamics}, 
+      author={Michele Giovanni Bianchi and Michele Re Fiorentin and Francesca Risplendi and Candido Fabrizio Pirri and Michele Parrinello and Luigi Bonati and Giancarlo Cicero},
+      year={2025},
+      eprint={2511.19338},
+      archivePrefix={arXiv},
+      primaryClass={physics.comp-ph},
+      url={https://arxiv.org/abs/2511.19338}, 
+}
+```
