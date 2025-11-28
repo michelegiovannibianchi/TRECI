@@ -2,7 +2,7 @@
 
 source ~/.bashrc
 
-# Activate the conda environment with MACE installed
+# Activate the conda environment with Franken installed
 # Make sure to set the correct path to your Franken environment
 ENV_PATH=$1
 mamba activate "$ENV_PATH"
