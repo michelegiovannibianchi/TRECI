@@ -17,7 +17,7 @@ ENV_PATH="/leonardo/pub/userexternal/mbianchi/mace_v0.3.13"
 mamba activate "$ENV_PATH"
 
 #path to utils
-WORKFLOW_UTILS_PATH="../../../workflow_utils"
+WORKFLOW_UTILS_PATH="../../../treci"
 
 # Compute standard deviation of the forces from an ensamble of 4 ML models
 python $WORKFLOW_UTILS_PATH/extract_std_dev_active_learning.py --DUMP_NAME ../Cu_H2O_NVT.dump --PATH_FF ../../Training/ --PREFIX_FF MACE_Cu_H2O_PZC   

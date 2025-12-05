@@ -1,0 +1,33 @@
+#!/bin/bash
+#SBATCH --account=IscrB_ProAmmo
+#SBATCH --partition=boost_usr_prod  # partition to be used
+##SBATCH --qos=boost_qos_dbg
+#SBATCH --time 10:30:00             # format: HH:MM:SS
+#SBATCH --nodes=1                   # node
+#SBATCH --ntasks-per-node=1         # tasks out of 32
+#SBATCH --cpus-per-task=32
+#SBATCH --export=NONE 		        # Avoid propagation of variables from the notebook submission environment
+#SBATCH --job-name='DEAL'
+############################
+
+
+# Activate environment
+# mamba init
+source ~/.bashrc
+
+# Specify your conda env with DEAL installed
+mamba activate /leonardo/pub/userexternal/mbianchi/env/DEAL_env/
+
+# Specify the parameter for the DEAL script via python
+cutoffs=CUTOFFS
+deal_thresholds=THRESHOLDS
+Case=(CASE)
+
+#path to utils
+WORKFLOW_UTILS_PATH="../../treci"
+
+#running
+python $WORKFLOW_UTILS_PATH/deal_run_script.py --label $Case --cutoffs $cutoffs --deal_thresholds $deal_thresholds    
+
+echo %DATE% %TIME%
+echo Job Terminated

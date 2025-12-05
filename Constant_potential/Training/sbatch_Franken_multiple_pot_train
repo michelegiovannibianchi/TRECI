@@ -28,7 +28,7 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 
 for V in m05 m075 m1 m125 m15 m175 m2;
 do
-    for RF in 1024;
+    for RF in 1024 2048 4096 8192;
     do
         echo "Training at potential $V V with $RF Random Features"
         torchrun --standalone --nnodes=1 --nproc-per-node=4 run_train_Franken_API.py  --Potential_value  $V  --RF_number $RF 

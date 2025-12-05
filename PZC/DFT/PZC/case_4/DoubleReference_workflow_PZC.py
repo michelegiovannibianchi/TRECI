@@ -1,6 +1,6 @@
 from ase.io import read,write
 from ase.calculators.vasp import Vasp
-from ase.calculators.DoubleReferenceMethod.DoubleReferenceWorkflow_calc import DoubleReferenceWorkflow_PZC
+from ase.calculators.DoubleReferenceMethod.DoubleReferenceWorkflow_calc import DoubleReferenceEvaluator,DoubleReferenceWorkflow_PZC
 import numpy as np
 
 #################   Definition of the ASE-VASP Calculator to compute the PZC single-point  ###########
@@ -31,8 +31,18 @@ calc_neutral_no_vacuum=Vasp(directory='neutral',
 
 #################   Start calculation of the PZC workflow   #################
 
+# Read ase atoms                
 snap=read('POSCAR',format='vasp')
 
-DoubleReferenceWorkflow_PZC(snap, calc_neutral_no_vacuum)
+# Prepare arguments for your workflow
+workflow_args = dict(
+                    calc_neutral_no_vacuum = calc_neutral_no_vacuum
+                    )
+
+# Attach evaluator
+snap.evaluator = DoubleReferenceEvaluator(DoubleReferenceWorkflow_PZC, **workflow_args)
+
+# Trigger calculation
+result = snap.evaluator.evaluate(snap)
 
 print("Calculation terminated")

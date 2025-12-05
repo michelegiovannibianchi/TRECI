@@ -9,7 +9,7 @@
 #SBATCH -A IscrB_ProAmmo
 #SBATCH -p boost_usr_prod
 #SBATCH --exclusive
-#SBATCH --export=NONE # Avoid propagation variable of the notebook submission environment
+#SBATCH --export=NONE 		   # Avoid propagation of variables from the notebook submission environment
 #SBATCH --job-name='train_1'
 
 
