@@ -729,9 +729,9 @@ def extract_data_from_multiple_potential_dataset(case,V_to_do,round,folder_input
 
             # Create a new atom objects with only the attribute needed for the training (energy, forces, bader charge)
             snap_new=Atoms(symbols=symbol,
-                    positions=snap_charge.get_positions(),
-                    cell=snap_charge.get_cell(),
-                    calculator=snap_charge.get_calculator(),
+                    positions=snap.get_positions(),
+                    cell=snap.get_cell(),
+                    calculator=snap.get_calculator(),
                     pbc=[1, 1, 1])
             snap_new.calc.results['energy']=energy
             snap_new.calc.results["forces"]=force
